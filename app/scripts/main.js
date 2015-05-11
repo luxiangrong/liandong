@@ -54,10 +54,12 @@
         }, function(e) {
             var node = $(this).get(0);
             var dialogBoundingRect = areaDialog.node.getBoundingClientRect();
-            if (e.pageX >= dialogBoundingRect.left && e.pageX <= dialogBoundingRect.right && e.pageY <= dialogBoundingRect.bottom + 10 && e.pageY >= dialogBoundingRect.top) {
+            // console.log(dialogBoundingRect);
+            // console.log(e.pageX);
+            if (e.clientX >= dialogBoundingRect.left && e.clientX <= dialogBoundingRect.right && e.clientY <= dialogBoundingRect.bottom + 30 && e.clientY >= dialogBoundingRect.top) {
                 $(areaDialog.node).on('mouseleave', function(e2) {
                     var nodeBoundingRect = node.getBoundingClientRect();
-                    if (e2.pageX >= nodeBoundingRect.left && e2.pageX <= nodeBoundingRect.right && e2.pageY <= nodeBoundingRect.bottom + 10 && e2.pageY >= nodeBoundingRect.top) {
+                    if (e2.clientX >= nodeBoundingRect.left && e2.clientX <= nodeBoundingRect.right && e2.clientY <= nodeBoundingRect.bottom + 10 && e2.clientY >= nodeBoundingRect.top) {
 
                     } else {
                         areaDialog.close().remove();
@@ -68,6 +70,18 @@
             }
 
         });
+
+        
+        //切换城市
+        $('.switch-city').on('mouseenter', function(){
+            var d = dialog({
+                id: 'switch-city-dialog',
+                quickClose: true,
+                content: $(this).next('.other-cities').clone()
+            });
+            d.width(220).show($(this).get(0));
+        });
+        
 
         //首页新闻切换
         var newsHandler;

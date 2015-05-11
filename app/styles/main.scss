@@ -19,6 +19,12 @@ $body-bg: #f7f7f7 !default;
     width: 1000px !important;
 }
 
+.padding-patch {
+    &.p10 {
+        padding: 0 10px;
+    }
+}
+
 #header {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -68,8 +74,16 @@ $body-bg: #f7f7f7 !default;
     .nav {
         &.cities {
             font-size: $font-size-small;
-            .glyphicon {
+            .glyphicon
+            {
                 transform: scale(0.6);
+            }
+            .iconfont {
+                font-size: 20px;
+                transform: scale(1.5);
+                &.icon-tiantan {
+                    margin-right: 5px;
+                }
             }
             > li {
                 > a {
@@ -81,6 +95,7 @@ $body-bg: #f7f7f7 !default;
                     }
                 }
                 &.active > a {
+                    top: -8px;
                     &, &:hover, &:focus {
                         color: #009AF8;
                         background-color: transparent;
@@ -134,7 +149,11 @@ $body-bg: #f7f7f7 !default;
             }
         }
     }
+    .other-cities {
+        display: none;
+    }
 }
+
 
 #banner {
     position: relative;
@@ -142,8 +161,11 @@ $body-bg: #f7f7f7 !default;
         overflow-x: hidden;
         position: relative;
         height: 562px;
+        &.changfang {
+            height: auto;
+        }
         img {
-            position: absolute;
+            position: relative;
             left: 50%;
             margin-left: -931px;
         }
@@ -200,6 +222,7 @@ $body-bg: #f7f7f7 !default;
             
         }
     }
+    
 }
 
 .news {
@@ -243,7 +266,7 @@ $body-bg: #f7f7f7 !default;
     .container {
         background-color: #ffffff;
         .nav-tabs {
-            margin-bottom: 20px;
+            margin-bottom: 10px; 
             background-color: #f2f2f2;
         }
         .nav-tabs {
@@ -279,11 +302,22 @@ $body-bg: #f7f7f7 !default;
             }
           }
         }
+        .btn-more {
+            color: #FF9934;
+            &:hover,
+            &:focus,
+            &:active
+             {
+                text-decoration: none;
+                color: darken(#ff9934, 15%);
+            }
+        }
         .row {
-            padding: 0 10px 10px 10px;
+            padding: 0 10px 0px 10px;
             position: relative;
             .col-pic {
                 @include make-xs-column(7);
+                padding-bottom: 10px;
                 width: 615px;
                 .img {
                     width: 100%;
@@ -331,7 +365,7 @@ $body-bg: #f7f7f7 !default;
             }
             .actions {
                 position: absolute;
-                bottom: 10px;
+                top: 280px;
                 right: 0px;
                 text-align: right;
                 a {
@@ -355,20 +389,26 @@ $body-bg: #f7f7f7 !default;
                     }
                 }
             }
-            &.project-features {
+            .project-features {
                 text-align: center;
                 padding: 15px 0 30px;
                 background-color: #f3f3f3;
+                clear: both;
+                margin: 0 -10px;
                 .col-xs-2 {
+                    cursor: pointer;
+                    transition: all 0.5s;
                     .icon {
                         width: 64px;
                         height: 64px;
                         border: 2px solid #09BBFF;
                         border-radius: 32px;
                         margin: 0 auto;
+                        transition: all 0.5s;
                         .iconfont {
                             color: #09BBFF;
                             font-size: 43px;
+                            transition: all 0.5s;
                         }
                     }
                     p {
@@ -379,9 +419,9 @@ $body-bg: #f7f7f7 !default;
                     }
                     &:hover {
                         color: #09BBFF;
-
                         .icon {
                             background-color: #09BBFF;
+                            transform: scale(1.2);
                             .iconfont {
                                 color: #ffffff;
                             }
@@ -390,6 +430,12 @@ $body-bg: #f7f7f7 !default;
                 }
                 
             }
+            &.multiple {
+                .project-features {
+                    display: none;
+                }
+            }
+
         }
     }
 }
@@ -561,6 +607,13 @@ $body-bg: #f7f7f7 !default;
 }
 
 .ui-dialog {
+    .other-cities {
+        display: none;
+        font-size: $font-size-small;
+        .glyphicon {
+            transform: scale(0.6);
+        }
+    }
     &.area-dialog {
         border: none;
         border-radius: 3px;
