@@ -25,6 +25,10 @@ $body-bg: #f7f7f7 !default;
     }
 }
 
+.btn-a {
+    @include button-variant(#ffffff, #09BBFF, #09BBFF);
+}
+
 #header {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -160,14 +164,11 @@ $body-bg: #f7f7f7 !default;
     .banner-image-wrap {
         overflow-x: hidden;
         position: relative;
-        height: 562px;
-        &.changfang {
-            height: auto;
-        }
         img {
             position: relative;
             left: 50%;
-            margin-left: -931px;
+            width: 2000px;
+            margin-left: -1000px;
         }
     }
     .area-wrap {
@@ -263,11 +264,34 @@ $body-bg: #f7f7f7 !default;
 }
 
 .main-content {
+    //产品详情页顶部名称
+    .product-name {
+        background-color: #ffffff;
+        line-height: 80px;
+        h3 {
+            line-height: 80px;
+            font-size: 22px;
+            margin: 0;
+        }
+        .tel {
+            color: #FF9A35;
+            font-size: 20px;
+            margin-right: 30px;
+            .iconfont {
+                font-size: 20px;
+                margin-right: 15px;
+            }
+        }
+    }
     .container {
         background-color: #ffffff;
         .nav-tabs {
             margin-bottom: 10px; 
             background-color: #f2f2f2;
+            &.location-traffic,
+            &.huxing {
+                background-color: transparent;
+            }
         }
         .nav-tabs {
           border-bottom: none;
@@ -435,7 +459,117 @@ $body-bg: #f7f7f7 !default;
                     display: none;
                 }
             }
-
+            &.project-list {
+                .thumbnail {
+                    border: none;
+                    background-color: transparent;
+                    border-radius: 0px;
+                    text-align: center;
+                    &:hover {
+                        background-color: #f2f2f2;
+                    }
+                    h3 {
+                        font-size: 16px;
+                    }
+                    p {
+                        font-size: 13px;
+                    }
+                    h4 {
+                        font-size: 14px;
+                        color: #FF7F00;
+                        font-weight: bold;
+                    }
+                    .btn-wrap {
+                        text-align: center;
+                        .btn {
+                            padding-left: 20px;
+                            padding-right: 20px;
+                        }
+                    }
+                }
+            }
+            &.odd {
+                background-color: #f6f6f6;
+            }
+            &.youshi {
+                padding-bottom: 20px;
+                .col-xs-3 {
+                    cursor: pointer;
+                    .iconfont {
+                        font-size: 36px;
+                        color: #09BBFF;
+                        margin-right: 20px;
+                        margin-left: 40px;
+                    }
+                    h4 {
+                        font-size: 16px;
+                        font-weight: bold;
+                        margin-bottom: 6px;
+                    }
+                    h5 {
+                        margin: 0;
+                        font-size: 12px;
+                    }
+                }
+                .caption {
+                    clear: both;
+                    display: none;
+                    padding: 20px 40px;
+                }
+            }
+            &.yetai {
+                .table {
+                    > thead {
+                        > tr {
+                            > th {
+                                background-color: #f2f2f2;
+                                color: #009BF8;
+                                font-size: 16px;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    > tbody {
+                        > tr {
+                            td {
+                                vertical-align: middle;
+                                &.name {
+                                    color: #FF8000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        h2.title {
+            font-size: $font-size-large;
+            text-align: left;
+            .iconfont {
+                margin-right: 10px;
+                color: #09bbff;
+                font-size: 24px;
+            }
+        }
+        .area-nav {
+            text-align: center;
+            background-color: #f2f2f2;
+            padding-bottom: 20px;
+            .iconfont {
+                font-size: 56px;
+                color: #888888;
+            }
+            a {
+                color: #333333;
+                &:hover {
+                    color: lighten(#333333, 20%);
+                    text-decoration: none;
+                }
+                p {
+                    margin-top: -10px;
+                    font-size: 16px;
+                }
+            }
         }
     }
 }
@@ -621,4 +755,65 @@ $body-bg: #f7f7f7 !default;
     }
 }
 
+
+//产品详情页的滚动导航
+#spy-nav {
+    .navbar-default {
+        border:none;
+    }
+}
+.navbar-scrollspy {
+    .navbar-nav {
+        float: none;
+        > li {
+            width: 16.666666%;
+            text-align: center;
+            > a {
+                .icon {
+                    width: 64px;
+                    height: 64px;
+                    line-height: 64px;
+                    border: 2px solid #09BBFF;
+                    border-radius: 32px;
+                    margin: 0 auto;
+                    transition: all 0.5s;
+                    margin-bottom: 10px;
+                    .iconfont {
+                        color: #09BBFF;
+                        font-size: 43px;
+                        transition: all 0.5s;
+                    }
+                }
+                p {
+                    margin: 0;
+                }
+                &:hover {
+                    color: #FF9A35;
+                    .icon {
+                        border-color: #FF9A35;
+                        .iconfont {
+                            color: #FF9A35;
+                        }
+                    }
+                }
+            }
+            &.active {
+                a {
+                    color: #FF9A35;
+                    background-color: transparent;
+                    .icon {
+                        border-color: #FF9A35;
+                        .iconfont {
+                            color: #FF9A35;
+                        }
+                    }
+                    &:hover {
+                        background-color: transparent;
+                        color: #FF9A35;
+                    }
+                }
+            }
+        }
+    }
+}
 
