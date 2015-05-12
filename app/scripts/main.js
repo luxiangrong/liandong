@@ -49,7 +49,7 @@
             }
 
             if ($(this).find('.popup-info').length === 1) {
-                areaDialog.width(320).show($(this).get(0));
+                areaDialog.width(320).show($(this).get(0)).focus();
             }
         }, function(e) {
             var node = $(this).get(0);
@@ -79,7 +79,7 @@
                 quickClose: true,
                 content: $(this).next('.other-cities').clone()
             });
-            d.width(220).show($(this).get(0));
+            d.width(220).show($(this).get(0)).focus();
         });
         
 

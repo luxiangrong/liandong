@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>首页-多项目地图检索</title>
+    <title>产品详情页</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -17,16 +17,22 @@
     <link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1431312514_224337.css">
+    <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1431355008_248872.css">
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
-<body>
+<body style="position: relative">
     <!--[if lt IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -100,7 +106,7 @@
     </header>
     <section id="banner">
         <div class="banner-image-wrap">
-            <img src="images/banner01.jpg" />
+            <img src="images/banner03.jpg" />
         </div>
         <div class="area-wrap">
             <div class="container">
@@ -211,184 +217,135 @@
             </div>
         </div>
     </section>
-    <section class="news">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-1 title">
-                    <i class="iconfont icon-tongzhiguanli"></i><img src="images/title01.png" />
-                </div>
-                <div class="col-xs-11">
-                    <ul class="slide">
-                        <li>
-                            <div class="item">海信集团签约联东U谷云南高新产业区1 <span class="date">2015-03-05</span></div>
-                        </li>
-                        <li>
-                            <div class="item">海信集团签约联东U谷云南高新产业区2 <span class="date">2015-03-05</span></div>
-                        </li>
-                        <li>
-                            <div class="item">海信集团签约联东U谷云南高新产业区3 <span class="date">2015-03-05</span></div>
-                        </li>
-                        <li>
-                            <div class="item">海信集团签约联东U谷云南高新产业区4 <span class="date">2015-03-05</span></div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
     <section class="main-content">
         <div class="container">
-            <div role="tabpanel">
-                <ul class="nav nav-tabs">
-                    <li role="presentation"><a href="#projects" role="tab" data-toggle="tab">在售项目 - 北京</a></li>
-                    <li role="presentation" class="active"><a href="#mapsearch" role="tab" data-toggle="tab">地图搜索</a></li>
-                </ul>
-            </div>
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <div role="tabpanel" class="tab-pane" id="projects">
-                    <div class="row">
-                        <div class="col-pic">
-                            <div class="col-wrap">
-                                <img src="images/pic01.jpg" />
-                            </div>
+            <div class="row anli">
+                <h2 class="title"><img src="images/icon10.png"  alt="" class="iconfont" />定制案例</h2>
+                <div class="col-xs-4 item">
+                    <a class="thumbnail">
+                        <img src="images/pic24.jpg" alt="...">
+                        <div class="caption">
+                            <p>2013年，张一元茶业有限公司在北京金桥项目定制12000平米总部大楼</p>
                         </div>
-                        <div class="col-info">
-                            <div class="col-wrap">
-                                <h3>联东U谷·北京金桥产业园</h3>
-                                <ul>
-                                    <li><img src="images/sprite-26-1.png" /> <strong>研发</strong>30平米、300平米</li>
-                                    <li><img src="images/sprite-26-2.png" /> <strong>独栋</strong>1600平米</li>
-                                    <li><img src="images/sprite-26-3.png" /> <strong>厂房</strong>30000平米</li>
-                                    <li><img src="images/sprite-26-4.png" /> 北京亦庄光机电一体化产业基地嘉创路10号</li>
-                                    <li><img src="images/sprite-26-5.png" /> <strong class="tel">400-631-7160</strong></li>
-                                </ul>
-                            </div>
+                    </a>
+                </div>
+                <div class="col-xs-4 item">
+                    <a class="thumbnail">
+                        <img src="images/pic25.jpg" alt="...">
+                        <div class="caption">
+                            <p>2013年，张一元茶业有限公司在北京金桥项目定制12000平米总部大楼</p>
                         </div>
-                        <div class="actions">
-                            <a href="#"><i class="iconfont icon-jiluban"></i>在线预约</a>
-                            <a href="#"><i class="iconfont icon-fenxiang"></i>分享</a>
-                            <a href="#"><i class="iconfont icon-rss"></i>推荐</a>
+                    </a>
+                </div>
+                <div class="col-xs-4 item">
+                    <a class="thumbnail">
+                        <img src="images/pic26.jpg" alt="...">
+                        <div class="caption">
+                            <p>2013年，张一元茶业有限公司在北京金桥项目定制12000平米总部大楼</p>
                         </div>
-                        <div class="row project-features">
-                            <div class="col-xs-2">
-                                <div class="icon">
-                                    <i class="iconfont icon-quweijiaotong"></i>
-                                </div>
-                                <p class="cn">区位交通</p>
-                                <p class="en">Location</p>
-                            </div>
-                            <div class="col-xs-2">
-                                <div class="icon">
-                                    <i class="iconfont icon-xiangmuyousi"></i></div>
-                                <p class="cn">项目优势</p>
-                                <p class="en">Project Benefits</p>
-                            </div>
-                            <div class="col-xs-2">
-                                <div class="icon">
-                                    <i class="iconfont icon-chanpinleixing"></i></div>
-                                <p class="cn">产品类型</p>
-                                <p class="en">Product Type</p>
-                            </div>
-                            <div class="col-xs-2">
-                                <div class="icon">
-                                    <i class="iconfont icon-yuanqufuwu"></i></div>
-                                <p class="cn">园区服务</p>
-                                <p class="en">Park Service</p>
-                            </div>
-                            <div class="col-xs-2">
-                                <div class="icon">
-                                    <i class="iconfont icon-ruzhuqiye"></i></div>
-                                <p class="cn">入驻企业</p>
-                                <p class="en">Check companies</p>
-                            </div>
-                            <div class="col-xs-2">
-                                <div class="icon">
-                                    <i class="iconfont icon-xiangmujieshao"></i></div>
-                                <p class="cn">项目介绍</p>
-                                <p class="en">Project Description</p>
-                            </div>
+                    </a>
+                </div>
+                <div class="col-xs-4 item">
+                    <a class="thumbnail">
+                        <img src="images/pic24.jpg" alt="...">
+                        <div class="caption">
+                            <p>2013年，张一元茶业有限公司在北京金桥项目定制12000平米总部大楼</p>
                         </div>
+                    </a>
+                </div>
+                <div class="col-xs-4 item">
+                    <a class="thumbnail">
+                        <img src="images/pic25.jpg" alt="...">
+                        <div class="caption">
+                            <p>2013年，张一元茶业有限公司在北京金桥项目定制12000平米总部大楼</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-4 item">
+                    <a class="thumbnail">
+                        <img src="images/pic26.jpg" alt="...">
+                        <div class="caption">
+                            <p>2013年，张一元茶业有限公司在北京金桥项目定制12000平米总部大楼</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-6 col-left">
+                    <div class="description left">
+                        <h4>个性化厂房定制：</h4>
+                        <p>适用范围：具有个性化定制需求的大企业客户</p>
+                        <p>定制面积需求：办公产品3000平米以上；厂房5000平米以上；</p>
+                        <p>企业税收要求：年平均纳税额大于500万元；或者年平均单方税收大于500元每平米</p>
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane active" id="mapsearch">
-                    <img src="images/map02.jpg"  alt="">
+                <div class="col-xs-6 col-right">
+                    <div class="description right">
+                        <h4>标准化厂房定制：</h4>
+                        <p>适用范围：对于层高、承重、荷载等有特殊需求的企业</p>
+                        <p>定制面积：不限</p>
+                        <p>定制要求：在目前产品基础上，需要进行部分个性化调整</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="hot-sales">
-        <div class="container">
-            <h2><i class="iconfont icon-zhoubian"></i>周边热销项目</h2>
-            <div class="owl-carousel">
-                <div class="item">
-                    <a href="#">
-                        <img src="images/pic02.jpg" />
-                        <h3>联东U谷﹒天津北方耀谷</h3>
-                        <p>北辰区800-4000大产权标准化厂房</p>
-                        <h4>VIP专线：400-808-8855转223</h4>
-                    </a>
+            <div class="row xuqiu">
+                <h2 class="title"><img src="images/icon11.png" class="iconfont">需求定制</h2>
+            </div>
+            <div class="row odd wizards">
+                <div class="col-xs-2 col-wizard col-xs-offset-1">
+                    <img src="images/icon12.png" alt="">
+                    <p>登记信息</p>
                 </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="images/pic03.jpg" />
-                        <h3>联东U谷﹒天津北方耀谷</h3>
-                        <p>北辰区800-4000大产权标准化厂房</p>
-                        <h4>VIP专线：400-808-8855转223</h4>
-                    </a>
+                <div class="col-xs-2 col-wizard">
+                    <img src="images/icon16.png" alt="">
                 </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="images/pic04.jpg" />
-                        <h3>联东U谷﹒天津北方耀谷</h3>
-                        <p>北辰区800-4000大产权标准化厂房</p>
-                        <h4>VIP专线：400-808-8855转223</h4>
-                    </a>
+                <div class="col-xs-2 col-wizard">
+                    <img src="images/icon13.png" alt="">
+                    <p>总监与您联系</p>
                 </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="images/pic02.jpg" />
-                        <h3>联东U谷﹒天津北方耀谷</h3>
-                        <p>北辰区800-4000大产权标准化厂房</p>
-                        <h4>VIP专线：400-808-8855转223</h4>
-                    </a>
+                <div class="col-xs-2 col-wizard">
+                    <img src="images/icon16.png" alt="">
                 </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="images/pic02.jpg" />
-                        <h3>联东U谷﹒天津北方耀谷</h3>
-                        <p>北辰区800-4000大产权标准化厂房</p>
-                        <h4>VIP专线：400-808-8855转223</h4>
-                    </a>
+                <div class="col-xs-2 col-wizard">
+                    <img src="images/icon14.png" alt="">
+                    <p>签署合作协议</p>
+                </div>
+                <div class="col-xs-2 col-wizard">
+                    <img src="images/icon16.png" alt="">
+                </div>
+                <div class="col-xs-2 col-wizard">
+                    <img src="images/icon15.png" alt="">
+                    <p>业务执行</p>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="adv">
-        <div class="container">
-            <img src="images/adv01.jpg" />
-        </div>
-    </section>
-    <section class="relation-links">
-        <div class="container">
-            <div class="padding-patch">
-                <h3><i class="iconfont icon-lianjie"></i>友情链接</h3>
-                <ul>
-                    <li><a href="#">联东投资集团</a></li>
-                    <li><a href="#">中关村科技园</a></li>
-                    <li><a href="#">国家信息技术产业部</a></li>
-                    <li><a href="#">国家能源部</a></li>
-                    <li><a href="#">北京市人民政府</a></li>
-                    <li><a href="#">天津市人民政府</a></li>
-                    <li><a href="#">北京市人民政府</a></li>
-                    <li><a href="#">国家信息技术部</a></li>
-                    <li><a href="#">中关村科技园</a></li>
-                    <li><a href="#">联东投资集团</a></li>
-                    <li><a href="#">天津市人民政府</a></li>
-                    <li><a href="#">中国商务部</a></li>
-                    <li><a href="#">国家能源部</a></li>
-                    <li><a href="#">中国商务部</a></li>
-                </ul>
+            <div class="row contact-form">
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="" class="col-sm-4 control-label">联系人</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-sm-4 control-label">电话</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-sm-4 control-label">公司名称</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="" placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="" class="col-sm-4 control-label">需求</label>
+                        <div class="col-sm-5">
+                            <textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-a">提   交</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>
@@ -453,16 +410,7 @@
     <script>
     (function($) {
         $(document).ready(function() {
-            $(".owl-carousel").owlCarousel({
-                slideSpeed: 300,
-                paginationSpeed: 400,
-                items: 3,
-                autoPlay: false,
-                pagination: false,
-                navigation: true,
-                itemsDesktop: false,
-                navigationText: ['<i class="glyphicon glyphicon-chevron-left"></i>', '<i class="glyphicon glyphicon-chevron-right"></i>']
-            });
+
         });
     })(jQuery);
     </script>

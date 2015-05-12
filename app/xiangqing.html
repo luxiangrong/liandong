@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="bower_components/OwlCarousel/owl-carousel/owl.carousel.css" />
     <link rel="stylesheet" href="bower_components/OwlCarousel/owl-carousel/owl.theme.css" />
     <link rel="stylesheet" href="bower_components/OwlCarousel/owl-carousel/owl.transitions.css" />
+    <link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <link rel="stylesheet" type="text/css" href="//at.alicdn.com/t/font_1431355008_248872.css">
@@ -23,6 +24,13 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
 
 <body style="position: relative">
@@ -211,76 +219,78 @@
         </div>
     </section>
     <section class="main-content">
-    	<div class="product-name">
-    		<div class="container">
-    			<h3 class="pull-left">联东U谷·北京金桥产业园</h3>
-    			<div class="qr-wrap pull-right">
-    				<img src="images/qr03.jpg" height="80" width="80" alt="" class="">
-    			</div>
-    			<div class="tel pull-right">
-    				<i class="iconfont icon-dianhualianxi"></i>400-1231-123
-    			</div>
-    		</div>
-    	</div>
-        <div class="container">
-            <div id="spy-nav">
-                <nav class="navbar navbar-default navbar-static">
-                    <div class="navbar-scrollspy">
-                        <ul class="nav navbar-nav">
-                            <li class="active">
-                                <a href="#location">
-                                    <div class="icon">
-                                        <i class="iconfont icon-quweijiaotong"></i>
-                                    </div>
-                                    <p class="cn">区位交通</p>
-                                    <p class="en">Location</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#product-benefits">
-                                    <div class="icon">
-                                        <i class="iconfont icon-xiangmuyousi"></i></div>
-                                    <p class="cn">项目优势</p>
-                                    <p class="en">Project Benefits</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#product-type">
-                                    <div class="icon">
-                                        <i class="iconfont icon-chanpinleixing"></i></div>
-                                    <p class="cn">产品业态</p>
-                                    <p class="en">Product Type</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#park-service">
-                                    <div class="icon">
-                                        <i class="iconfont icon-yuanqufuwu"></i></div>
-                                    <p class="cn">园区服务</p>
-                                    <p class="en">Park Service</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#check-companies">
-                                    <div class="icon">
-                                        <i class="iconfont icon-ruzhuqiye"></i></div>
-                                    <p class="cn">入驻企业</p>
-                                    <p class="en">Check companies</p>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#project-description">
-                                    <div class="icon">
-                                        <i class="iconfont icon-xiangmujieshao"></i></div>
-                                    <p class="cn">项目介绍</p>
-                                    <p class="en">Project Description</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+        <div class="product-name">
+            <div class="container">
+                <h3 class="pull-left">联东U谷·北京金桥产业园</h3>
+                <div class="qr-wrap pull-right">
+                    <img src="images/qr03.jpg" height="80" width="80" alt="" class="">
+                </div>
+                <div class="tel pull-right">
+                    <i class="iconfont icon-dianhualianxi"></i>400-1231-123
+                </div>
             </div>
-            <div role="tabpanel">
+        </div>
+        <div id="spy-nav" class="">
+            <div class="container">
+            <nav class="navbar navbar-default navbar-static">
+                <div class="navbar-scrollspy">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="#location">
+                                <div class="icon">
+                                    <i class="iconfont icon-quweijiaotong"></i>
+                                </div>
+                                <p class="cn">区位交通</p>
+                                <p class="en">Location</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-benefits">
+                                <div class="icon">
+                                    <i class="iconfont icon-xiangmuyousi"></i></div>
+                                <p class="cn">项目优势</p>
+                                <p class="en">Project Benefits</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#product-type">
+                                <div class="icon">
+                                    <i class="iconfont icon-chanpinleixing"></i></div>
+                                <p class="cn">产品业态</p>
+                                <p class="en">Product Type</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#park-service">
+                                <div class="icon">
+                                    <i class="iconfont icon-yuanqufuwu"></i></div>
+                                <p class="cn">园区服务</p>
+                                <p class="en">Park Service</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#check-companies">
+                                <div class="icon">
+                                    <i class="iconfont icon-ruzhuqiye"></i></div>
+                                <p class="cn">入驻企业</p>
+                                <p class="en">Check companies</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#project-description">
+                                <div class="icon">
+                                    <i class="iconfont icon-xiangmujieshao"></i></div>
+                                <p class="cn">项目介绍</p>
+                                <p class="en">Project Description</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            </div>
+        </div>
+        <div class="container">
+            <div role="tabpanel" id="location">
                 <ul class="nav nav-tabs location-traffic">
                     <li role="presentation" class="active"><a href="#location-plan" role="tab" data-toggle="tab"><i class="iconfont icon-quweijiaotong"></i>         区位规划</a></li>
                     <li role="presentation"><a href="#traffic-map" role="tab" data-toggle="tab"><i class="iconfont icon-3"></i>        交通地图</a></li>
@@ -288,184 +298,262 @@
             </div>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane active" id="location-plan">
-                	<!-- 此处显示的是后台编辑器保存的html内容 -->
-					<img src="images/pic06.jpg" alt="">
+                    <!-- 此处显示的是后台编辑器保存的html内容 -->
+                    <img src="images/pic06.jpg" alt="">
                 </div>
                 <div role="tabpanel" class="tab-pane" id="traffic-map">
-                	<!-- 此处显示的是百度地图类似的内容吧 -->
-					<img src="images/pic06.jpg" alt="">
+                    <!-- 此处显示的是百度地图类似的内容吧 -->
+                    <img src="images/pic06.jpg" alt="">
                 </div>
             </div>
             <div class="row youshi odd">
-            	<h2 class="title"> <i class="iconfont icon-xiangmuyousi"></i>项目优势</h2>
-            	<div class="col-xs-3" data-target="caption-1" data-role="expand">
-            		<i class="iconfont icon-linbao pull-left"></i>
-            		<h4>实景现房</h4>
-					<h5>企业拎包即刻入住</h5>
-            	</div>
-            	<div class="col-xs-3" data-target="caption-2" data-role="expand">
-            		<i class="iconfont icon-jiangzhang pull-left"></i>
-            		<h4>办公产品</h4>
-					<h5>稀缺独栋研发</h5>
-            	</div>
-            	<div class="col-xs-3" data-target="caption-3" data-role="expand">
-            		<i class="iconfont icon-diqiu pull-left"></i>
-            		<h4>生态园区</h4>
-					<h5>组团化布局</h5>
-            	</div>
-            	<div class="col-xs-3" data-target="caption-4" data-role="expand">
-            		<i class="iconfont icon-zhengjian pull-left"></i>
-            		<h4>产证齐全</h4>
-					<h5>可贷款，可按揭</h5>
-            	</div>
-            	<div class="caption" id="caption-1">
-					实景现房实景现房实景现房实景现房实景现房实景现房实景现房
-				</div>
-				<div class="caption" id="caption-2">
-					办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品
-				</div>
-				<div class="caption" id="caption-3">
-					生态园区生态园区生态园区生态园区生态园区生态园区生态园区生态园区生态园区生态园区生态园区生态园区生态园区
-				</div>
-				<div class="caption" id="caption-4">
-					产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全
-				</div>
+                <h2 class="title" id="product-benefits"> <i class="iconfont icon-xiangmuyousi"></i>项目优势</h2>
+                <div class="col-xs-3" data-target="caption-1" data-role="expand">
+                    <i class="iconfont icon-linbao pull-left"></i>
+                    <h4>实景现房</h4>
+                    <h5>企业拎包即刻入住</h5>
+                </div>
+                <div class="col-xs-3" data-target="caption-2" data-role="expand">
+                    <i class="iconfont icon-jiangzhang pull-left"></i>
+                    <h4>办公产品</h4>
+                    <h5>稀缺独栋研发</h5>
+                </div>
+                <div class="col-xs-3" data-target="caption-3" data-role="expand">
+                    <i class="iconfont icon-diqiu pull-left"></i>
+                    <h4>生态园区</h4>
+                    <h5>组团化布局</h5>
+                </div>
+                <div class="col-xs-3" data-target="caption-4" data-role="expand">
+                    <i class="iconfont icon-zhengjian pull-left"></i>
+                    <h4>产证齐全</h4>
+                    <h5>可贷款，可按揭</h5>
+                </div>
+                <div class="caption" id="caption-1">
+                    实景现房实景现房实景现房实景现房实景现房实景现房实景现房
+                </div>
+                <div class="caption" id="caption-2">
+                    办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品办公产品
+                </div>
+                <div class="caption" id="caption-3">
+                    生态园区生态园区生态园区生态园区生态园区生态园区生态园区生态园区生态园区生态园区生态园区生态园区生态园区
+                </div>
+                <div class="caption" id="caption-4">
+                    产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全产证齐全
+                </div>
             </div>
             <div class="row yetai">
-            	<h2 class="title"> <i class="iconfont icon-chanpinleixing"></i>产品业态</h2>
-            	<table class="table">
-            		<thead>
-            			<tr>
-            				<th style="width: 5%;"></th>
-            				<th style="width: 10%;"></th>
-            				<th style="width: 30%;">面积(平方米)</th>
-            				<th>产品描述</th>
-            			</tr>
-            		</thead>
-            		<tbody>
-            			<tr>
-            				<td class="icon"><img src="images/sprite-36-1.png" alt=""></td>
-            				<td class="name">总部办公</td>
-            				<td class="range">500、800、1000、2000、2400</td>
-            				<td class="description">3层，独栋办公、双拼，首层层高4.2米，二层、三层3.6米层高，多露台设计</td>
-            			</tr>
-            			<tr>
-            				<td class="icon"><img src="images/sprite-36-2.png" alt=""></td>
-            				<td class="name">中试研发</td>
-            				<td class="range">800、1600、2500</td>
-            				<td class="description">3层，独栋研发、联排研发形式，满足企业个性化需求，及办公、生产、研发与一体，首层层高约4.5米，二层、三层4.2米层高</td>
-            			</tr>
-            			<tr>
-            				<td class="icon"><img src="images/sprite-36-3.png" alt=""></td>
-            				<td class="name">标准厂房</td>
-            				<td class="range">1050、1500、2400、3000</td>
-            				<td>3层厂房，组团式布局，首层层高6米，二层、三层层高4.2米</td>
-            			</tr>
-            			<tr>
-            				<td class="icon"><img src="images/sprite-36-2.png" alt=""></td>
-            				<td class="name">定制厂房</td>
-            				<td class="range">总计约60000平米</td>
-            				<td class="description">企业可以根据不同需求定制各种产品</td>
-            			</tr>
-            		</tbody>
-            	</table>
-            	<div role="tabpanel">
-	                <ul class="nav nav-tabs huxing">
-	                    <li role="presentation" class="active"><a href="#huxing-1" role="tab" data-toggle="tab">M户型</a></li>
-	                    <li role="presentation"><a href="#huxing-2" role="tab" data-toggle="tab">L户型</a></li>
-	                    <li role="presentation"><a href="#huxing-3" role="tab" data-toggle="tab">K户型</a></li>
-	                    <li role="presentation"><a href="#huxing-4" role="tab" data-toggle="tab">I户型</a></li>
-	                </ul>
-	            </div>
-	            <div class="tab-content">
-	                <div role="tabpanel" class="tab-pane active" id="huxing-1">
-						<img src="images/pic07.jpg" alt="">
-						<img src="images/pic08.jpg" alt="">
-						<img src="images/pic09.jpg" alt="">
-						<img src="images/pic10.jpg" alt="">
-						<img src="images/pic11.jpg" alt="">
-						<img src="images/pic12.jpg" alt="">
-	                </div>
-	                <div role="tabpanel" class="tab-pane" id="huxing-2">
-	                	<!-- 此处显示的是百度地图类似的内容吧 -->
-						<img src="images/pic06.jpg" alt="">
-	                </div>
-	            </div>
+                <h2 class="title" id="product-type"> <i class="iconfont icon-chanpinleixing"></i>产品业态</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th style="width: 5%;"></th>
+                            <th style="width: 10%;"></th>
+                            <th style="width: 30%;">面积(平方米)</th>
+                            <th>产品描述</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="icon"><img src="images/sprite-36-1.png" alt=""></td>
+                            <td class="name">总部办公</td>
+                            <td class="range">500、800、1000、2000、2400</td>
+                            <td class="description">3层，独栋办公、双拼，首层层高4.2米，二层、三层3.6米层高，多露台设计</td>
+                        </tr>
+                        <tr>
+                            <td class="icon"><img src="images/sprite-36-2.png" alt=""></td>
+                            <td class="name">中试研发</td>
+                            <td class="range">800、1600、2500</td>
+                            <td class="description">3层，独栋研发、联排研发形式，满足企业个性化需求，及办公、生产、研发与一体，首层层高约4.5米，二层、三层4.2米层高</td>
+                        </tr>
+                        <tr>
+                            <td class="icon"><img src="images/sprite-36-3.png" alt=""></td>
+                            <td class="name">标准厂房</td>
+                            <td class="range">1050、1500、2400、3000</td>
+                            <td>3层厂房，组团式布局，首层层高6米，二层、三层层高4.2米</td>
+                        </tr>
+                        <tr>
+                            <td class="icon"><img src="images/sprite-36-2.png" alt=""></td>
+                            <td class="name">定制厂房</td>
+                            <td class="range">总计约60000平米</td>
+                            <td class="description">企业可以根据不同需求定制各种产品</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div role="tabpanel">
+                    <ul class="nav nav-tabs huxing">
+                        <li role="presentation" class="active"><a href="#huxing-1" role="tab" data-toggle="tab">M户型</a></li>
+                        <li role="presentation"><a href="#huxing-2" role="tab" data-toggle="tab">L户型</a></li>
+                        <li role="presentation"><a href="#huxing-3" role="tab" data-toggle="tab">K户型</a></li>
+                        <li role="presentation"><a href="#huxing-4" role="tab" data-toggle="tab">I户型</a></li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="huxing-1">
+                        <div class="row">
+                            <div class="col-xs-6 builing-info">
+                                <a href="#" class="thumbnail">
+                                    <img src="images/pic23.jpg"  alt="...">
+                                </a>
+                                <div class="col-xs-4 guige">
+                                    <strong>A1</strong>
+                                    <p>建筑面积约：<span>8087.14</span>m <sup>2</sup></p>
+                                    <em>标准<br/>厂房</em>
+                                </div>
+                                <div class="col-xs-8">
+                                    <p>外立面庄重挺拔，简约大气，彰显非凡企业形象</p>
+                                    <p>外立面庄重挺拔，简约大气，彰显非凡企业形象</p>
+                                    <p>外立面庄重挺拔，简约大气，彰显非凡企业形象</p>
+                                    <p>外立面庄重挺拔，简约大气，彰显非凡企业形象</p>
+                                    <p>外立面庄重挺拔，简约大气，彰显非凡企业形象</p>
+                                    <p>外立面庄重挺拔，简约大气，彰显非凡企业形象</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <a class="fancybox" rel="gallery1" href="images/pic08.jpg" title="tttt">
+                                    <img src="images/pic08.jpg" alt="" />
+                                </a>
+                                <a class="fancybox" rel="gallery2" href="images/pic10.jpg" title="tttt">
+                                    <img src="images/pic10.jpg" alt="" />
+                                </a>
+                                <a class="fancybox" rel="gallery2" href="images/pic11.jpg" title="tttt">
+                                    <img src="images/pic11.jpg" alt="" />
+                                </a>
+                                <a class="fancybox" rel="gallery2" href="images/pic12.jpg" title="tttt">
+                                    <img src="images/pic12.jpg" alt="" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="huxing-2">
+                        <img src="images/pic07.jpg" alt="">
+                        <img src="images/pic08.jpg" alt="">
+                        <img src="images/pic09.jpg" alt="">
+                        <img src="images/pic10.jpg" alt="">
+                        <img src="images/pic11.jpg" alt="">
+                        <img src="images/pic12.jpg" alt="">
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="huxing-3">
+                        <img src="images/pic07.jpg" alt="">
+                        <img src="images/pic08.jpg" alt="">
+                        <img src="images/pic09.jpg" alt="">
+                        <img src="images/pic10.jpg" alt="">
+                        <img src="images/pic11.jpg" alt="">
+                        <img src="images/pic12.jpg" alt="">
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="huxing-4">
+                        <img src="images/pic07.jpg" alt="">
+                        <img src="images/pic08.jpg" alt="">
+                        <img src="images/pic09.jpg" alt="">
+                        <img src="images/pic10.jpg" alt="">
+                        <img src="images/pic11.jpg" alt="">
+                        <img src="images/pic12.jpg" alt="">
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="hot-sales">
-        <div class="container">
-            <h2><i class="iconfont icon-zhoubian"></i>周边热销项目</h2>
-            <div class="owl-carousel">
-                <div class="item">
+            <div class="row odd fuwu">
+                <h2 class="title" id="park-service"><img src="images/icon02.png" alt="" class="iconfont">服务配套</h2>
+                <div class="col-xs-4">
                     <a href="#">
-                        <img src="images/pic02.jpg" />
-                        <h3>联东U谷﹒天津北方耀谷</h3>
-                        <p>北辰区800-4000大产权标准化厂房</p>
-                        <h4>VIP专线：400-808-8855转223</h4>
+                        <img src="images/icon03.png" alt="" class="iconfont pull-left">
+                        <h4>基础物业</h4>
+                        <h5>安保、维修、绿化等</h5>
                     </a>
                 </div>
-                <div class="item">
+                <div class="col-xs-4">
                     <a href="#">
-                        <img src="images/pic03.jpg" />
-                        <h3>联东U谷﹒天津北方耀谷</h3>
-                        <p>北辰区800-4000大产权标准化厂房</p>
-                        <h4>VIP专线：400-808-8855转223</h4>
+                        <img src="images/icon04.png" alt="" class="iconfont pull-left">
+                        <h4>园区配套</h4>
+                        <h5>宿舍、餐饮、洗衣等</h5>
                     </a>
                 </div>
-                <div class="item">
+                <div class="col-xs-4">
                     <a href="#">
-                        <img src="images/pic04.jpg" />
-                        <h3>联东U谷﹒天津北方耀谷</h3>
-                        <p>北辰区800-4000大产权标准化厂房</p>
-                        <h4>VIP专线：400-808-8855转223</h4>
+                        <img src="images/icon05.png" alt="" class="iconfont pull-left">
+                        <h4>软性服务</h4>
+                        <h5>金融、人才、文化等</h5>
                     </a>
                 </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="images/pic02.jpg" />
-                        <h3>联东U谷﹒天津北方耀谷</h3>
-                        <p>北辰区800-4000大产权标准化厂房</p>
-                        <h4>VIP专线：400-808-8855转223</h4>
-                    </a>
+                <div role="tabpanel" class="tabpanel col-xs-12">
+                    <ul class="nav nav-tabs nav-fuwu">
+                        <li role="presentation" class="active"><a href="#fuwu-1" role="tab" data-toggle="tab">产业环境</a></li>
+                        <li role="presentation"><a href="#fuwu-2" role="tab" data-toggle="tab">周边配套</a></li>
+                        <li role="presentation" class="last"><a href="#fuwu-3" role="tab" data-toggle="tab">交通配套</a></li>
+                    </ul>
                 </div>
-                <div class="item">
-                    <a href="#">
-                        <img src="images/pic02.jpg" />
-                        <h3>联东U谷﹒天津北方耀谷</h3>
-                        <p>北辰区800-4000大产权标准化厂房</p>
-                        <h4>VIP专线：400-808-8855转223</h4>
-                    </a>
+                <div class="tab-content col-xs-12">
+                    <div role="tabpanel" class="tab-pane active" id="fuwu-1">
+                        <!-- 此处显示的是后台编辑器保存的html内容 -->
+                        <img src="images/pic13.jpg" alt="">
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="fuwu-2">
+                        <!-- 此处显示的是后台编辑器保存的html内容 -->
+                        <img src="images/pic13.jpg" alt="">
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="fuwu-3">
+                        <!-- 此处显示的是后台编辑器保存的html内容 -->
+                        <img src="images/pic13.jpg" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="adv">
-        <div class="container">
-            <img src="images/adv01.jpg" />
-        </div>
-    </section>
-    <section class="relation-links">
-        <div class="container">
-            <div class="padding-patch">
-                <h3><i class="iconfont icon-lianjie"></i>友情链接</h3>
-                <ul>
-                    <li><a href="#">联东投资集团</a></li>
-                    <li><a href="#">中关村科技园</a></li>
-                    <li><a href="#">国家信息技术产业部</a></li>
-                    <li><a href="#">国家能源部</a></li>
-                    <li><a href="#">北京市人民政府</a></li>
-                    <li><a href="#">天津市人民政府</a></li>
-                    <li><a href="#">北京市人民政府</a></li>
-                    <li><a href="#">国家信息技术部</a></li>
-                    <li><a href="#">中关村科技园</a></li>
-                    <li><a href="#">联东投资集团</a></li>
-                    <li><a href="#">天津市人民政府</a></li>
-                    <li><a href="#">中国商务部</a></li>
-                    <li><a href="#">国家能源部</a></li>
-                    <li><a href="#">中国商务部</a></li>
-                </ul>
+            <div class="row ruzhuqiye">
+                <h2 class="title" id="check-companies"> <i class="iconfont icon-ruzhuqiye"></i>入驻企业</h2>
+                <div class="owl-carousel col-xs-11 col-xs-offset-1" id="qiyelist">
+                    <div class="item"><img src="images/pic14.jpg" alt=""></div>
+                    <div class="item"><img src="images/pic15.jpg" alt=""></div>
+                    <div class="item"><img src="images/pic16.jpg" alt=""></div>
+                    <div class="item"><img src="images/pic17.jpg" alt=""></div>
+                    <div class="item"><img src="images/pic18.jpg" alt=""></div>
+                    <div class="item"><img src="images/pic14.jpg" alt=""></div>
+                    <div class="item"><img src="images/pic15.jpg" alt=""></div>
+                    <div class="item"><img src="images/pic16.jpg" alt=""></div>
+                    <div class="item"><img src="images/pic17.jpg" alt=""></div>
+                    <div class="item"><img src="images/pic18.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="row odd project-description">
+                <h2 class="title" id="project-description"><i class="iconfont icon-xiangmujieshao"></i>项目介绍</h2>
+                <div class="col-xs-8 col-pic">
+                    <div id="project-show" class="col-show">
+                            <img src="images/pic19.jpg" alt="">
+                    </div>
+                    <div class="col-thumb">
+                        <ul id="project-thumb">
+                            <li class="active">
+                                <a href="images/pic19.jpg">
+                                    <img src="images/pic20.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/pic21.jpg">
+                                    <img src="images/pic21.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/pic22.jpg">
+                                    <img src="images/pic22.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/pic20.jpg">
+                                    <img src="images/pic20.jpg" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="images/pic21.jpg">
+                                    <img src="images/pic21.jpg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="prev"><img src="images/icon08.png"  alt=""></div>
+                        <div class="next"><img src="images/icon09.png"  alt=""></div>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-text">
+                    <p>1、效果图下方展示产品亮点（图文或者 视频）</p>
+                    <p>2、然后展示经济圈icon，但不能选择城市，只是描点定位不同的区域，置顶悬浮变为文字，效果类似链家，参照上文的连接</p>
+                    <p>3、所有项目按经济圈划分矩阵显示</p>
+                    <p>4、东北区域可进行地图查看项目，项目可在地图上选择，类似多项目地图功能。可自由勾选是否显示地图</p>
+                </div>
             </div>
         </div>
     </section>
@@ -519,6 +607,9 @@
     <script src="bower_components/art-dialog/dist/dialog.js"></script>
     <script src="bower_components/art-dialog/dist/dialog-plus.js"></script>
     <script src="bower_components/OwlCarousel/owl-carousel/owl.carousel.js"></script>
+    <script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="bower_components/fancybox/source/jquery.fancybox.js"></script>
+    <script src="bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:js({app,.tmp}) scripts/main.js -->
@@ -527,17 +618,75 @@
     <script>
     (function($) {
         $(document).ready(function() {
-        	$(window).scroll(function(){
-            	var scrollTop = $(this).scrollTop();
-            	console.log(scrollTop);
+            $('body').scrollspy({ target: '#spy-nav',offset: 196 })
+
+            $(window).scroll(function() {
+                var scrollTop = $(this).scrollTop();
+                if(scrollTop >= 570) {
+                    $('.product-name, #spy-nav').addClass('fix-top');
+                    $('body').css('paddingTop', '171px');
+                } else {
+                    $('.product-name, #spy-nav').removeClass('fix-top');
+                    $('body').css('paddingTop', '0px');
+                }
             });
+
+            $('#spy-nav .nav a').on('click', function(e){
+                e.preventDefault();
+                var targetId = $(this).attr('href');
+                $(targetId).velocity('scroll',{offset: -171});
+            });
+
+            $('[data-role="expand"]').hover(function() {
+                var target = $(this).attr('data-target');
+                $('#' + target).velocity('slideDown');
+            }, function() {
+                var target = $(this).attr('data-target');
+                $('#' + target).velocity('slideUp');
+            });
+
+            $('#qiyelist').owlCarousel({
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                items: 5,
+                autoPlay: false,
+                pagination: false,
+                navigation: true,
+                itemsDesktop: false,
+                navigationText: ['<img src="images/icon06.png" />', '<img src="images/icon07.png" />']
+            });
+
             
-            $('[data-role="expand"]').hover(function(){
-            	var target = $(this).attr('data-target');
-            	$('#' + target).velocity('slideDown');
-            }, function(){
-            	var target = $(this).attr('data-target');
-            	$('#' + target).velocity('slideUp');
+            $('#project-thumb li a').on('click', function(e){
+                e.preventDefault();
+                var imgSrc = $(this).attr('href');
+                $("#project-show img").velocity({opacity: 0},{duration: 1}).velocity({opacity: 1});
+                $("#project-show img").attr('src', imgSrc);
+            });
+            $('.col-thumb .prev').on('click', function(){
+                var current = $('#project-thumb').find('.active');
+                if(current.prev().length > 0) {
+                    $('#project-thumb').velocity({
+                        marginTop: '+=' + current.outerHeight(true) + 'px'
+                    });
+                    current.removeClass('active');
+                    current.prev().addClass('active');
+                }
+            });
+            $('.col-thumb .next').on('click', function(){
+                var current = $('#project-thumb').find('.active');
+                if(current.next().next().next().length > 0) {
+                    $('#project-thumb').velocity({
+                        marginTop: '-=' + current.outerHeight(true) + 'px'
+                    });
+                    current.removeClass('active');
+                    current.next().addClass('active');
+                }
+            });
+
+            $(".fancybox").fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none'
             });
         });
     })(jQuery);
