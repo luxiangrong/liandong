@@ -15,7 +15,6 @@ $body-bg: #f7f7f7 !default;
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
-// 
 
 .container {
     width: 1000px !important;
@@ -822,6 +821,41 @@ $body-bg: #f7f7f7 !default;
                         padding-left: 40px;
                         padding-right: 40px;
                     }
+                }
+            }
+            &.yuanqufuwu {
+                border-bottom: 1px solid #E5E5E5;
+                padding-bottom: 30px;
+                .col-pic {
+                    @include make-xs-column(6);
+                    width: 550px;
+                    text-align: center;
+                }
+                .col-tedian {
+                    @include make-xs-column(6);
+                    width: 430px; 
+                    text-align: center;
+                    padding-top: 30px;
+                    p {
+                        margin-top: 20px;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            &.yuanqu-news {
+                padding: 30px 40px;
+                h2 {
+                    text-align: center;
+                    font-size: 20px;
+                }
+                p {
+                    line-height: 1.8;
+                }
+                .public-date {
+                    text-align: center;
+                }
+                .btn-wrap {
+                    text-align: center;
                 }
             }
         }

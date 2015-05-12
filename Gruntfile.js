@@ -193,7 +193,8 @@ module.exports = function (grunt) {
     wiredep: {
       app: {
         ignorePath: /^\/|\.\.\//,
-        src: ['<%= config.app %>/*.html']
+        src: ['<%= config.app %>/*.html'],
+        exclude: ['mootools/dist/*.js' ]
       },
       sass: {
         src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
