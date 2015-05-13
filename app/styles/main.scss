@@ -31,6 +31,9 @@ $body-bg: #f7f7f7 !default;
 .btn-a {
     @include button-variant(#ffffff, #09BBFF, #09BBFF);
 }
+.btn-b {
+    @include button-variant(#ffffff, #f0ad03, #f0ad03);
+}
 
 #header {
     padding-top: 15px;
@@ -1291,6 +1294,33 @@ $body-bg: #f7f7f7 !default;
             padding-top: 30px;
             margin-top: 12px;
             border-top: 1px solid #22a5d7;
+            min-height: 600px;
+            .pagination {
+                li {
+                    &.ellipsis {
+                       span {
+                            
+                       }
+                    }
+                    &.extra {
+                        span {
+                            color: #a9a9a9; 
+                            border: none;
+                            padding: 0;
+                            padding-top: 2px;
+                            margin-left: 10px;
+                            &:hover {
+                                background-color: transparent;
+                            }
+                            input {
+                                width: 2em;
+                                color: #666666;
+                                margin: 0 5px;
+                            }
+                        }
+                    }
+                }
+            }
             .top-news {
                 @include make-xs-column(12);
                 padding-bottom: 30px;
@@ -1332,32 +1362,7 @@ $body-bg: #f7f7f7 !default;
                         color: #333333;
                     }
                 }
-                .pagination {
-                    li {
-                        &.ellipsis {
-                           span {
-                                
-                           }
-                        }
-                        &.extra {
-                            span {
-                                color: #a9a9a9; 
-                                border: none;
-                                padding: 0;
-                                padding-top: 2px;
-                                margin-left: 10px;
-                                &:hover {
-                                    background-color: transparent;
-                                }
-                                input {
-                                    width: 2em;
-                                    color: #666666;
-                                    margin: 0 5px;
-                                }
-                            }
-                        }
-                    }
-                }
+                
             }
             &.jieshao {
                 padding: 20px;
@@ -1408,6 +1413,254 @@ $body-bg: #f7f7f7 !default;
                         font-size: 12px;
                         line-height: 1.8;
                         margin: 5px 0;
+                    }
+                }
+            }
+            &.zeren {
+                h1 {
+                    color: #3ec5ff;
+                    font-size: 24px;
+                }
+                .img-wrap {
+                    padding-left: 60px;
+                    margin-bottom: 15px;
+                    img {
+                        margin-right: 10px;
+                    }
+                }
+                .pagination {
+                    margin-top: 50px;
+                }
+            }
+            &.lianxi {
+                .map {
+                    margin-bottom: 50px;
+                }
+                p {
+                    .iconfont {
+                        margin-right: 10px;
+                    }
+                }
+            }
+            &.dashiji {
+                padding-bottom: 50px;
+                .timeline {
+                    @include clearfix();
+                    position: relative;
+                    background: url(../images/timeline_bg.png) no-repeat 80px top;
+                    padding-left: 110px;
+                    padding-bottom: 30px;
+                    .date {
+                        color: #ff9a35;
+                        font-size: 12px;
+                        position: absolute;
+                        left: 20px;
+                        top: 0px;
+                    }
+                    .pic {
+                        width: 165px;
+                        float: left;
+                        margin-right: 20px;
+                    }
+                    .caption {
+                        width: 400px;
+                        float: left;
+                        h4 {
+                            margin-top: 0;
+                            font-size: 14px;
+                        }
+                        p {
+                            font-size: 12px;
+                            color: #666666;
+                            line-height: 1.8;
+                        }
+                    }
+                    &.timeline-year {
+                        height: 50px;
+                        background-position: 80px -20px;
+                        .date {
+                            color: #28b7ee;
+                            font-size: 16px;
+                            left: 0px;
+                        }
+                    }
+                    &.timeline-title {
+                        height: 50px;
+                        background: url(../images/timeline_bg2.png) no-repeat 72px top;
+                        .title {
+                            left: 120px;
+                            top: 0px;
+                            font-size: 20px;
+                            color: #28b7ee;
+                        }
+                    }
+                    &.last {
+                        padding-bottom: 5px;
+                    }
+                }
+            }
+            &.zhaopin {
+                padding-bottom: 50px;
+                .form-search {
+                    input {
+                        width: 615px;
+                        height: 30px;
+                        margin-right: 10px;
+                    }
+                }
+                .title {
+                    font-size: 18px;
+                    color: #3ec5ff;
+                    border-bottom: 1px solid #3ec5ff;
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                }
+                .job-title {
+                    color: #3ec5ff;
+                    text-align: center;
+                    font-size: 18px;
+                }
+                .separate-h {
+                    height: 0;
+                    border-bottom: 1px dotted #dedede;
+                    margin: 20px 0;
+                }
+                .list-job {
+                    li {
+                        line-height: 30px;
+                        border-bottom: 1px dotted #cccccc;
+                        font-size: 12px;
+                        a {
+                            color: #333333;
+                            text-decoration: none;
+                            .iconfont {
+                                font-size: 14px;
+                                margin-right: 10px;
+                                background-color: #e6e6e6;
+                                color: #ffffff;
+                                font-size: 12px;
+                                padding: 2px;
+                                border-radius: 2px;
+                            }
+                            &:hover {
+                                color: #3ec5ff;
+                                .iconfont {
+                                    color: #ffffff;
+                                    background-color: #3ec5ff;
+                                }
+                            }
+                        }
+                    }
+                }
+                .nav-areas {
+                    > li {
+                        width: 114px;
+                        position: relative;
+                        > a {
+                            color: #333333;
+                            border: 1px solid #dadada;
+                            .caret {
+                                margin-top: 7px;
+                            }
+                        }
+                    }
+                }
+                .heading {
+                    background-color: #f3f3f3;
+                    margin-top: 30px;
+                    margin-bottom: 20px;
+                    line-height: 37px;
+                    font-weight: bold;
+                    padding-left: 2em;
+                }
+                .jobs-wrap {
+                    background: url(../images/bg03.png) repeat-y left top;
+                }
+                .jobs {
+                    display: none;
+                    padding-left: 50px;
+                }
+                dl {
+                    margin-top: 30px;
+                    dt {
+                        color: #ff9a35;
+                        font-size: 18px;
+                        margin-bottom: 30px;
+                        font-weight: normal;
+                        &.small {
+                            font-size: 14px;
+                        }
+                    }
+                    dd {
+                        font-size: 12px;
+                    }
+                }
+                .table-search-result {
+                    font-size: 12px;
+                    thead {
+                        th {
+                            border-bottom: none;
+                            font-size: 14px;
+                            &.tac {
+                                text-align: center;
+                            }
+                        }
+                    }
+                    tbody {
+                        td {
+                            border:none;
+                            border-bottom: 1px dotted #cccccc;
+                            &.tac {
+                                text-align: center;
+                            }
+                            &.text-gary {
+                                columns: #999999;
+                            }
+                        }
+                    }
+                    .iconfont {
+                        font-size: 12px;
+                        margin-right: 10px;
+                        background-color: #e6e6e6;
+                        color: #ffffff;
+                        font-size: 12px;
+                        padding: 2px;
+                        border-radius: 2px;
+                    }
+                }
+                .note {
+                    color: #ff9a35;
+                }
+                .text-danger {
+                    color: #ff0000;
+                    margin-left: 5px;
+                }
+                .form-apply {
+                    font-size: 12px;
+                    margin-top: 20px;
+                    .form-group-radius {
+                        margin-bottom: 25px;
+                    }
+                    .col-xs-12 {
+                        .col-xs-9 {
+                            width: 79%;
+                        }
+                        .col-xs-1 {
+                            width:4.33333%;
+                        }
+                    }
+                    label {
+                        font-weight: normal;
+                    }
+                    .btn-wrap {
+                        text-align: center;
+                    }
+                    .addition {
+                        color: #666666;
+                    }
+                    .text-muted {
+                        margin-top: 5px;
+                        text-align: right;
                     }
                 }
             }
