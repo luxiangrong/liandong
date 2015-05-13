@@ -111,14 +111,90 @@
     </section>
     <section class="main-content">
         <div class="container">
-            <div class="row">
-                <div id="MooFlow">
-                    <div class="box"><img src="images/pic29.jpg" title="强身健体、笑迎末日--12月21滑雪记1" alt="Activity.html" /></div>
-                    <div class="box"><img src="images/pic29.jpg" title="强身健体、笑迎末日--12月21滑雪记2" alt="Activity.html" /></div>
-                    <div class="box"><img src="images/pic29.jpg" title="强身健体、笑迎末日--12月21滑雪记3" alt="Activity.html" /></div>
-                    <div class="box"><img src="images/pic29.jpg" title="强身健体、笑迎末日--12月21滑雪记4" alt="Activity.html" /></div>
-                    <div class="box"><img src="images/pic29.jpg" title="强身健体、笑迎末日--12月21滑雪记5" alt="Activity.html" /></div>
-                    <div class="box"><img src="images/pic29.jpg" title="强身健体、笑迎末日--12月21滑雪记6" alt="Activity.html" /></div>
+            <div class="row ruanxingfuwu">
+                <h2 class="title"><img src="images/icon19.png" alt="" class="iconfont" />园区软性服务</h2>
+                <div class="col-xs-6">
+                    <div role="tabpanel">
+                        <ul class="nav nav-tabs">
+                            <li role="presentation" class="active">
+                                <a href="#tab-1" role="tab" data-toggle="tab">
+                                    <img src="images/sprite-72-1.png" alt="" class="iconfont">
+                                    <p>政策辅导</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab-2" role="tab" data-toggle="tab">
+                                    <img src="images/sprite-72-2.png" alt="" class="iconfont">
+                                    <p>市场推广</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab-3" role="tab" data-toggle="tab">
+                                    <img src="images/sprite-72-3.png" alt="" class="iconfont">
+                                    <p>人才发展</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab-4" role="tab" data-toggle="tab">
+                                    <img src="images/sprite-72-4.png" alt="" class="iconfont">
+                                    <p>资金对接</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab-5" role="tab" data-toggle="tab">
+                                    <img src="images/sprite-72-5.png" alt="" class="iconfont">
+                                    <p>企业家活动</p>
+                                </a>
+                            </li>
+                            <li role="presentation">
+                                <a href="#tab-6" role="tab" data-toggle="tab">
+                                    <img src="images/sprite-72-6.png" alt="" class="iconfont">
+                                    <p>园区文化</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <img src="images/pic30.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="tab-content clearfix">
+                    <div role="tabpanel" class="tab-pane fade in active" id="tab-1">
+                        <h4 class="tab-title">政策辅导</h4>
+                        <div class="iframe-wrap">
+                            <iframe src="gallery1.html" frameborder="0" scrolling="no" width="100%" height="350"></iframe>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tab-2">
+                        <h4 class="tab-title">市场推广</h4>
+                        <div class="iframe-wrap">
+                            <iframe src="gallery1.html" frameborder="0" scrolling="no" width="100%" height="350"></iframe>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tab-3">
+                        <h4 class="tab-title">人才发展</h4>
+                        <div class="iframe-wrap">
+                            <iframe src="gallery1.html" frameborder="0" scrolling="no" width="100%" height="350"></iframe>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tab-4">
+                        <h4 class="tab-title">资金对接</h4>
+                        <div class="iframe-wrap">
+                            <iframe src="gallery1.html" frameborder="0" scrolling="no" width="100%" height="350"></iframe>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tab-5">
+                        <h4 class="tab-title">企业家活动</h4>
+                        <div class="iframe-wrap">
+                            <iframe src="gallery1.html" frameborder="0" scrolling="no" width="100%" height="350"></iframe>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="tab-6">
+                        <h4 class="tab-title">园区文化</h4>
+                        <div class="iframe-wrap">
+                            <iframe src="gallery1.html" frameborder="0" scrolling="no" width="100%" height="350"></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row yuanqufuwu">
@@ -233,16 +309,58 @@
     <script src="bower_components/art-dialog/dist/dialog.js"></script>
     <script src="bower_components/art-dialog/dist/dialog-plus.js"></script>
     <script src="bower_components/OwlCarousel/owl-carousel/owl.carousel.js"></script>
+    <script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script src="bower_components/fancybox/source/jquery.fancybox.js"></script>
     <script src="bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script src="scripts/jquery.jcoverflip.js"></script>
     <!-- build:js({app,.tmp}) scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
     <script>
     (function($) {
         $(document).ready(function() {
+            $('#flip').jcoverflip({
+                current: 2,
+                beforeCss: function(el, container, offset) {
+                    return [
+                        $.jcoverflip.animationElement(el, {
+                            left: (container.width() / 2 - 210 - 110 * offset + 20 * offset) + 'px',
+                            bottom: '20px'
+                        }, {}),
+                        $.jcoverflip.animationElement(el.find('img'), {
+                            width: Math.max(10, 100 - 20 * offset * offset) + 'px'
+                        }, {})
+                    ];
+                },
+                afterCss: function(el, container, offset) {
+                    return [
+                        $.jcoverflip.animationElement(el, {
+                            left: (container.width() / 2 + 110 + 110 * offset) + 'px',
+                            bottom: '20px'
+                        }, {}),
+                        $.jcoverflip.animationElement(el.find('img'), {
+                            width: Math.max(10, 100 - 20 * offset * offset) + 'px'
+                        }, {})
+                    ];
+                },
+                currentCss: function(el, container) {
+                    return [
+                        $.jcoverflip.animationElement(el, {
+                            left: (container.width() / 2 - 100) + 'px',
+                            bottom: 0
+                        }, {}),
+                        $.jcoverflip.animationElement(el.find('img'), {
+                            width: '200px'
+                        }, {})
+                    ];
+                },
+                change: function(event, ui) {
+                    jQuery('#scrollbar').slider('value', ui.to * 25);
+                }
+            });
 
         });
     })(jQuery);

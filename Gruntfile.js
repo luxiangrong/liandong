@@ -323,7 +323,9 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
-            'styles/fonts/{,*/}*.*'
+            'styles/fonts/{,*/}*.*',
+            'scripts/mootools*.js',
+            'scripts/MooFlow.js'
           ]
         }, {
           src: 'node_modules/apache-server-configs/dist/.htaccess',

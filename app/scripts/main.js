@@ -117,5 +117,21 @@
             }, 3000);
         };
         buildNewsSlider();
+
+        //关于我们页面左侧导航
+        $('.side-nav > li a').on('click', function(e){
+            if($(this).next('.sub').length == 0) {
+                return;
+            } else {
+                e.preventDefault();
+                var subNav = $(this).next('.sub');
+                $(this).find('.iconfont').toggleClass('icon-crmtubiao34 icon-jiantou');
+                if(subNav.is(':visible')) {
+                    subNav.velocity('slideUp');
+                } else {
+                    subNav.velocity('slideDown');
+                }
+            }
+        });
     });
 })(jQuery);
