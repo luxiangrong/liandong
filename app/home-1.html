@@ -68,7 +68,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="pull-left">
+            <div class="pull-left logo">
                 <a href="home-1.html"><img src="images/logo.png" /></a>
             </div>
             <nav class="">
@@ -122,8 +122,10 @@
                                 <a href="#">大连(1)</a>
                             </div>
                             <div class="hot-project">
-                                <img src="images/project01.jpg" />
-                                <h5>热销项目 - 铁西</h5>
+                                <a href="#">
+                                <a href="#"><img src="images/project01.jpg" />
+                                <h5>热销项目 - 铁西</h5></a>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -138,8 +140,8 @@
                                 <a href="#">大连(1)</a>
                             </div>
                             <div class="hot-project">
-                                <img src="images/project01.jpg" />
-                                <h5>热销项目 - 铁西</h5>
+                                <a href="#"><img src="images/project01.jpg" />
+                                <h5>热销项目 - 铁西</h5></a>
                             </div>
                         </div>
                     </div>
@@ -154,8 +156,8 @@
                                 <a href="#">大连(1)</a>
                             </div>
                             <div class="hot-project">
-                                <img src="images/project01.jpg" />
-                                <h5>热销项目 - 铁西</h5>
+                                <a href="#"><img src="images/project01.jpg" />
+                                <h5>热销项目 - 铁西</h5></a>
                             </div>
                         </div>
                     </div>
@@ -172,8 +174,8 @@
                                 <a href="#">大连(1)</a>
                             </div>
                             <div class="hot-project">
-                                <img src="images/project01.jpg" />
-                                <h5>热销项目 - 铁西</h5>
+                                <a href="#"><img src="images/project01.jpg" />
+                                <h5>热销项目 - 铁西</h5></a>
                             </div>
                         </div>
                     </div>
@@ -188,8 +190,8 @@
                                 <a href="#">大连(1)</a>
                             </div>
                             <div class="hot-project">
-                                <img src="images/project01.jpg" />
-                                <h5>热销项目 - 铁西</h5>
+                                <a href="#"><img src="images/project01.jpg" />
+                                <h5>热销项目 - 铁西</h5></a>
                             </div>
                         </div>
                     </div>
@@ -208,8 +210,8 @@
                                 <a href="#">大连(1)</a>
                             </div>
                             <div class="hot-project">
-                                <img src="images/project01.jpg" />
-                                <h5>热销项目 - 铁西</h5>
+                                <a href="#"><img src="images/project01.jpg" />
+                                <h5>热销项目 - 铁西</h5></a>
                             </div>
                         </div>
                     </div>
@@ -256,7 +258,17 @@
                     <div class="row">
                         <div class="col-pic">
                             <div class="col-wrap">
-                                <img src="images/pic01.jpg" />
+                                <div class="owl-carousel-2">
+                                    <div class="item">
+                                        <img src="images/pic01.jpg" />
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/pic01.jpg" />
+                                    </div>
+                                    <div class="item">
+                                        <img src="images/pic01.jpg" />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-info">
@@ -318,7 +330,7 @@
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="mapsearch">
-                    <img src="images/map02.jpg"  alt="">
+                    <img src="images/map02.jpg" alt="">
                 </div>
             </div>
         </div>
@@ -470,8 +482,17 @@
                 navigationText: ['<i class="glyphicon glyphicon-chevron-left"></i>', '<i class="glyphicon glyphicon-chevron-right"></i>']
             });
 
-            
-            
+
+            $(".owl-carousel-2").owlCarousel({
+                autoPlay: true,
+                slideSpeed : 300,
+                paginationSpeed : 400,
+                navigation: false,
+                singleItem:true
+            });
+
+
+
         });
     })(jQuery);
     </script>

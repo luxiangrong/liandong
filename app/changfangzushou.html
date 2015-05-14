@@ -62,9 +62,9 @@
                     </li>
                 </ul>
             </nav>
-            <div class="pull-left">
-                <a href="home-1.html"><img src="images/logo.png" /></a>
-            </div>
+            <div class="pull-left logo">
+                    <a href="home-1.html"><img src="images/logo.png" /></a>
+                </div>
             <nav class="">
                 <ul class="nav nav-pills main-nav directive pull-right">
                     <li class="active">
@@ -125,32 +125,32 @@
                     </a>
                 </div>
                 <div class="col-xs-2">
-                    <a href="dongbei">
+                    <a href="#dongbei">
                         <i class="iconfont icon-dongbei"></i>
                         <p>东北区</p>
                     </a>
                 </div>
                 <div class="col-xs-2">
-                    <a href="huazhong">
+                    <a href="#huazhong">
                         <i class="iconfont icon-huazhong"></i>
                         <p>华中区</p>
                     </a>
                 </div>
                 <div class="col-xs-2">
-                    <a href="huanan">
+                    <a href="#huanan">
                         <i class="iconfont icon-huanan"></i>
                         <p>华南区</p>
                     </a>
                 </div>
                 <div class="col-xs-2">
-                    <a href="xinan">
+                    <a href="#xinan">
                         <i class="iconfont icon-xinan"></i>
                         <p>西南区</p>
                     </a>
                 </div>
             </div>
             <div class="row project-list">
-                <h2 class="title"><i class="iconfont icon-huabei"></i>华北区</h2>
+                <h2 id="huabei" class="title"><i class="iconfont icon-huabei"></i>华北区</h2>
                 <div class="col-xs-4">
                     <div class="thumbnail">
                         <img src="images/pic02.jpg" />
@@ -231,7 +231,7 @@
                 </div>
             </div>
             <div class="row project-list">
-                <h2 class="title"><i class="iconfont icon-huadong"></i>华东区</h2>
+                <h2 id="huadong" class="title"><i class="iconfont icon-huadong"></i>华东区</h2>
                 <div class="col-xs-4">
                     <div class="thumbnail">
                         <img src="images/pic02.jpg" />
@@ -312,7 +312,7 @@
                 </div>
             </div>
             <div class="row project-list">
-                <h2 class="title"><i class="iconfont icon-dongbei"></i>东北区</h2>
+                <h2 id="dongbei" class="title"><i class="iconfont icon-dongbei"></i>东北区</h2>
                 <div class="col-xs-4">
                     <div class="thumbnail">
                         <img src="images/pic02.jpg" />
@@ -455,15 +455,10 @@
     <script>
     (function($) {
         $(document).ready(function() {
-            $(".owl-carousel").owlCarousel({
-                slideSpeed: 300,
-                paginationSpeed: 400,
-                items: 3,
-                autoPlay: false,
-                pagination: false,
-                navigation: true,
-                itemsDesktop: false,
-                navigationText: ['<i class="glyphicon glyphicon-chevron-left"></i>', '<i class="glyphicon glyphicon-chevron-right"></i>']
+            $(".area-nav a").on('click', function(e){
+                e.preventDefault();
+                var target = $(this).attr('href');
+                $(target).velocity('scroll',{offset: -20});
             });
         });
     })(jQuery);
