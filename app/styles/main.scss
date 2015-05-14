@@ -1,3 +1,5 @@
+@import "iconfont.scss";
+
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 $font-family-sans-serif: "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", Arial, sans-serif !default;
 $font-family-serif: Georgia,
@@ -33,6 +35,10 @@ $body-bg: #f7f7f7 !default;
 }
 .btn-b {
     @include button-variant(#ffffff, #f0ad03, #f0ad03);
+}
+
+.form-control {
+    border-radius: 0px;
 }
 
 #header {
@@ -171,10 +177,43 @@ $body-bg: #f7f7f7 !default;
         overflow-x: hidden;
         position: relative;
         img {
-            position: relative;
+            position: absolute;
             left: 50%;
-            width: 2000px;
-            margin-left: -1000px;
+            width: 1900px;
+            margin-left: -950px;
+            &.current {
+                display: block !important;
+            }
+        }
+        &.h560 {
+            height: 560px;
+            img {
+                height: 560px;
+            }
+        }
+        &.h460 {
+            height: 460px;
+            img {
+                height: 460px;
+            }
+        }
+        &.h430 {
+            height: 430px;
+            img {
+                height: 430px;
+            }
+        }
+        &.h350 {
+            height: 350px;
+            img {
+                height: 350px;
+            }
+        }
+        &.h200 {
+            height: 200px;
+            img {
+                height: 200px;
+            }
         }
     }
     .area-wrap {
@@ -1093,7 +1132,7 @@ $body-bg: #f7f7f7 !default;
     .hot-project {
         h5 {
             margin: 0;
-            background-color: #000000;
+            background-color: #333333;
             line-height: 27px;
             color: #ffffff;
             text-align: center;
@@ -1496,6 +1535,52 @@ $body-bg: #f7f7f7 !default;
                     }
                     &.last {
                         padding-bottom: 5px;
+                    }
+                }
+            }
+            &.rongyu {
+                .list {
+                    padding-left: 20px;
+                    li {
+                        margin-bottom: 10px;
+                        a {
+                            color: #333333;
+                        }
+                    }
+                }
+                .nav-years {
+                    padding: 10px 50px;
+                    .item {
+                        a {
+                            display: block;
+                            background-color: #b5b5b5;
+                            color: #ffffff;
+                            text-decoration: none;
+                            line-height: 30px;
+                            text-align: center;
+                            margin: 0 2px;
+                        }
+                    }
+                    .owl-buttons {
+                        position: relative;
+                        .owl-prev, .owl-next {
+                            position: absolute;
+                            top: -45px;
+                            border-radius: 0px;
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                            text-align: center;
+                            background-color: #5da7e1;
+                            padding: 0;
+                            color: #ffffff;
+                        }
+                        .owl-prev {
+                            left: -40px;
+                        }
+                        .owl-next {
+                            right: -40px;
+                        }
                     }
                 }
             }

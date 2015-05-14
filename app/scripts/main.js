@@ -1,7 +1,21 @@
 'use strict';
 (function($) {
     $(document).ready(function() {
+        //首页banner切换
+        window.setInterval(function(){
+            var length = $('.banner-image-wrap img').length;
 
+            if(length == 1) {
+                return;
+            }
+
+            var currentIndex = $('.banner-image-wrap img.current').index() || 0;
+
+            $('.banner-image-wrap img').eq(currentIndex).velocity('fadeOut');
+            $('.banner-image-wrap img').eq((currentIndex + 1 ) % length).velocity('fadeIn');
+            $('.banner-image-wrap img').removeClass('current');
+            $('.banner-image-wrap img').eq((currentIndex + 1 ) % length).addClass('current');
+        }, 5000);
 
         //主导航底部的指示条效果，复杂
         $('.directive li').on('mouseenter.directive', function() {

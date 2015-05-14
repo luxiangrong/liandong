@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>关于我们-联系我们</title>
+    <title>关于我们-公司荣誉</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -120,10 +120,10 @@
                                 <li><a href=""><i class="iconfont icon-dian"></i>集团介绍</a></li>
                                 <li><a href=""><i class="iconfont icon-dian"></i>联东文化</a></li>
                                 <li><a href=""><i class="iconfont icon-dian"></i>大事记&emsp;</a></li>
-                                <li><a href=""><i class="iconfont icon-dian"></i>公司荣誉</a></li>
+                                <li class="active"><a href=""><i class="iconfont icon-dian"></i>公司荣誉</a></li>
                                 <li><a href=""><i class="iconfont icon-dian"></i>社会责任</a></li>
                                 <li><a href=""><i class="iconfont icon-dian"></i>人才招聘</a></li>
-                                <li class="active"><a href=""><i class="iconfont icon-dian"></i>联系方式</a></li>
+                                <li><a href=""><i class="iconfont icon-dian"></i>联系方式</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -133,14 +133,46 @@
                         <div class="breadcrumb-wrap pull-right clearfix">
                             <a href="" class=""><i class="iconfont icon-home"></i>首页 ></a>
                             <a href="" class="">走进联东 ></a>
-                            <a href="" class="last">联系我们</a>
+                            <a href="" class="last">集团介绍</a>
                         </div>
-                        <div class="content lianxi">
-                        	<img src="images/pic39.jpg" alt="" class="img-responsive map">
-                        	<p><img src="images/icon20.png" alt="" class="iconfont">地址：北京市中关村科技园亦庄产业园光机电一体化产业基地经海7路1号 联东商务中心</p>
-                        	<p><img src="images/icon21.png" alt="" class="iconfont">邮编：101111</p>
-                        	<p><img src="images/icon22.png" alt="" class="iconfont">电话：010-80806501</p>
-                        	<p><img src="images/icon23.png" alt="" class="iconfont">传真：010-80806800</p>
+                        <div class="content rongyu col-xs-12">
+                            <div class="iframe-wrap">
+                                <iframe src="gallery2.html" frameborder="0" scrolling="no" width="100%" height="250"></iframe>
+                            </div>
+                            <div class="owl-carousel nav-years">
+                                <div class="item">
+                                    <a href="#">2014</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">2013</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">2012</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">2011</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">2010</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">2010</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">2010</a>
+                                </div>
+                                <div class="item">
+                                    <a href="#">2010</a>
+                                </div>
+                            </div>
+                            <ul class="list-unstyled list">
+                            	<li><a href="">★ 联东U谷荣获"2011年度最具竞争力产业园项目"称号</a></li>
+                            	<li><a href="">★ 联东U谷•金桥产业园获"最具影响力产业园区"奖</a></li>
+                            	<li><a href="">★ 联东U谷•永乐产业园获"最具投资价值产业园区"奖</a></li>
+                            	<li><a href="">★ 北京联东模板有限公司荣获2011-2012年度北京市"纳税信用A级企业"荣誉称号</a></li>
+                            	<li><a href="">★ 北京联东模板有限公司被评定为"北京市高新技术企业"</a></li>
+                            	<li><a href="">★ 联东模板被北京市工业促进局评为“北京市企业技术中心”</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -208,7 +240,16 @@
     <script>
     (function($) {
         $(document).ready(function() {
-
+            $(".owl-carousel").owlCarousel({
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                items: 7,
+                autoPlay: false,
+                pagination: false,
+                navigation: true,
+                itemsDesktop: false,
+                navigationText: ['<i class="glyphicon glyphicon-chevron-left"></i>', '<i class="glyphicon glyphicon-chevron-right"></i>']
+            });
         });
     })(jQuery);
     </script>

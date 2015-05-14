@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片墙</title>
+<link rel="stylesheet" href="styles/main.css">
+<script type="text/javascript" src="scripts/mootools-1.2-core.js"></script>
+<script type="text/javascript" src="scripts/mootools-1.2-more.js"></script>
+<script type="text/javascript" src="scripts/MooFlow.js"></script>
+<script type="text/javascript">
+
+var myMooFlowPage = {	
+	start: function(){
+		var mf = new MooFlow($('MooFlow'), {
+			useSlider: true,
+			useAutoPlay: false,
+			useCaption: true,
+			useResize: true,
+			useKeyInput: true,
+			bgColor: 'transparent'
+		});
+		var currentImg=mf.getCurrent(0);
+		$('MooFlow').addEvent('click',function(e){
+			var target=$(e.target);
+			if(currentImg.src==target.get('src')){
+			    window.open(currentImg.alt);
+			};
+			currentImg=mf.getCurrent();
+		});
+	}
+};
+window.addEvent('domready', myMooFlowPage.start);
+</script>
+
+<style>
+
+
+</style>
+</head>
+<body style="background-color: transparent">
+<div id="content">
+	<div id="MooFlow" class="rongyu">
+	    <div class="box"><img src="images/pic01.jpg" title="1" alt="Activity.html" /></div>
+	    <div class="box"><img src="images/pic02.jpg" title="2" alt="Activity.html" /></div>
+        <div class="box"><img src="images/pic03.jpg" title="3" alt="Activity.html" /></div>
+        <div class="box"><img src="images/pic04.jpg" title="4" alt="Activity.html" /></div>
+        <div class="box"><img src="images/pic05.jpg" title="5" alt="Activity.html" /></div>
+        <div class="box"><img src="images/pic06.jpg" title="6" alt="Activity.html" /></div>
+	</div>
+</div>
+
+</body>
+</html>

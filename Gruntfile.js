@@ -323,6 +323,7 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             'images/{,*/}*.webp',
             '{,*/}*.html',
+            'styles/iconfont.*',
             'styles/fonts/{,*/}*.*',
             'scripts/mootools*.js',
             'scripts/MooFlow.js'
