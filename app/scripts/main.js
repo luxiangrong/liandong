@@ -47,6 +47,19 @@
                 queue: false
             });
         });
+        (function(){
+            var active = $('.directive li.active');
+            var width = active.width();
+            var pos = active.position();
+            $('.directive .directive-bar').find('.glyphicon').show();
+            $('.directive .directive-bar').velocity({
+                width: width,
+                left: pos.left
+            }, {
+                duration: 0,
+                queue: false
+            });
+        })();
 
         //banner处地区导航的，弹出层效果
         var areaDialog;

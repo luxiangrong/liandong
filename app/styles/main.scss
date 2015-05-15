@@ -153,12 +153,13 @@ $body-bg: #f7f7f7 !default;
                     position: absolute;
                     left: 0px;
                     bottom: 0px;
-                    width: 62px;
+                    width: 0px;
                     height: 4px;
                     background-color: #009AF8;
                     text-align: center;
                     color: #009AF8;
                     .glyphicon {
+                        display: none;
                         margin-top: -20px;
                         position: absolute;
                         left: 50%;
