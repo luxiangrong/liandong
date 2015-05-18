@@ -100,14 +100,14 @@
 
         
         //切换城市
-        $('.switch-city').on('mouseenter', function(){
-            var d = dialog({
-                id: 'switch-city-dialog',
-                quickClose: true,
-                content: $(this).next('.other-cities').clone()
-            });
-            d.width(220).show($(this).get(0)).focus();
-        });
+        // $('.switch-city').on('mouseenter', function(){
+        //     var d = dialog({
+        //         id: 'switch-city-dialog',
+        //         quickClose: true,
+        //         content: $(this).next('.other-cities').clone()
+        //     });
+        //     d.width(220).show($(this).get(0)).focus();
+        // });
         
 
         //首页新闻切换

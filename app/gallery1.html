@@ -17,7 +17,8 @@ var myMooFlowPage = {
 			useCaption: true,
 			useResize: true,
 			useKeyInput: true,
-			bgColor: 'transparent'
+			bgColor: 'transparent',
+			startIndex: Math.floor($$('.box').length / 2 )
 		});
 		var currentImg=mf.getCurrent(0);
 		$('MooFlow').addEvent('click',function(e){
