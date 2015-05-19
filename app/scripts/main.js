@@ -2,20 +2,55 @@
 (function($) {
     $(document).ready(function() {
         //首页banner切换
-        window.setInterval(function(){
+        var currentIndex = $('.banner-image-wrap img.current').index();
+        if(currentIndex === -1) {
+            $('.banner-image-wrap img').eq(0).addClass('current');
+        }
+        var nextBanner = function() {
             var length = $('.banner-image-wrap img').length;
 
             if(length == 1) {
                 return;
             }
 
-            var currentIndex = $('.banner-image-wrap img.current').index() || 0;
+            var currentIndex = $('.banner-image-wrap img.current').index();
+
+            currentIndex = currentIndex === -1 ? 0 : currentIndex;
 
             $('.banner-image-wrap img').eq(currentIndex).velocity('fadeOut');
             $('.banner-image-wrap img').eq((currentIndex + 1 ) % length).velocity('fadeIn');
             $('.banner-image-wrap img').removeClass('current');
             $('.banner-image-wrap img').eq((currentIndex + 1 ) % length).addClass('current');
+        };
+        var prevBanner = function() {
+            var length = $('.banner-image-wrap img').length;
+            if(length == 1) {
+                return;
+            }
+            var currentIndex = $('.banner-image-wrap img.current').index();
+            currentIndex = currentIndex === -1 ? 0 : currentIndex;
+
+            $('.banner-image-wrap img').eq(currentIndex).velocity('fadeOut');
+            $('.banner-image-wrap img').eq((currentIndex - 1 ) % length).velocity('fadeIn');
+            $('.banner-image-wrap img').removeClass('current');
+            $('.banner-image-wrap img').eq((currentIndex - 1 ) % length).addClass('current');
+        };
+        var bannerSwitchHandler = window.setInterval(function(){
+            nextBanner();
         }, 5000);
+        $('.banner-image-wrap .controls .prev').on('click', function(){
+            prevBanner();
+        });
+        $('.banner-image-wrap .controls .next').on('click', function(){
+            nextBanner();
+        });
+        $('.banner-image-wrap .controls .prev, .banner-image-wrap .controls .next').hover(function(){
+            clearInterval(bannerSwitchHandler);
+        }, function(){
+            bannerSwitchHandler = window.setInterval(function(){
+                nextBanner();
+            }, 5000);
+        });
 
         //主导航底部的指示条效果，复杂
         $('.directive li').on('mouseenter.directive', function() {
