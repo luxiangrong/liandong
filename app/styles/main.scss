@@ -246,7 +246,6 @@ $body-bg: #f7f7f7 !default;
             left: 50%;
             width: 1900px;
             margin-left: -950px;
-            z-index: 1; 
             display: none;
             @include opacity(0);
             &.current {
@@ -259,11 +258,21 @@ $body-bg: #f7f7f7 !default;
             img {
                 height: 560px;
             }
+            .controls {
+                .prev,.next {
+                    top: 280px;
+                }
+            }
         }
         &.h460 {
             height: 460px;
             img {
                 height: 460px;
+            }
+            .controls {
+                .prev,.next {
+                    top: 230px;
+                }
             }
         }
         &.h430 {
@@ -271,17 +280,32 @@ $body-bg: #f7f7f7 !default;
             img {
                 height: 430px;
             }
+            .controls {
+                .prev,.next {
+                    top: 215px;
+                }
+            }
         }
         &.h350 {
             height: 350px;
             img {
                 height: 350px;
             }
+            .controls {
+                .prev,.next {
+                    top: 175px;
+                }
+            }
         }
         &.h200 {
             height: 200px;
             img {
                 height: 200px;
+                .controls {
+                .prev,.next {
+                    top: 100px;
+                }
+            }
             }
         }
     }
@@ -360,7 +384,8 @@ $body-bg: #f7f7f7 !default;
     //产品详情页顶部名称
     .product-name {
         background-color: #ffffff;
-        line-height: 80px;
+        height: 80px;
+        transition: height 0.5s;
         h3 {
             line-height: 80px;
             font-size: 22px;
@@ -370,6 +395,7 @@ $body-bg: #f7f7f7 !default;
             color: #FF9A35;
             font-size: 20px;
             margin-right: 30px;
+            line-height: 80px; 
             .iconfont {
                 font-size: 20px;
                 margin-right: 15px;
@@ -380,6 +406,10 @@ $body-bg: #f7f7f7 !default;
             top: 0;
             width: 100%;
             z-index: 100;
+            height: 40px;
+            h3, .tel {
+                line-height: 40px;
+            }
             .qr-wrap {
                 display: none;
             }
@@ -564,6 +594,9 @@ $body-bg: #f7f7f7 !default;
                         }
                     }
                 }
+                .dialog-content {
+                    display: none;
+                }
             }
             .project-features {
                 text-align: center;
@@ -574,6 +607,10 @@ $body-bg: #f7f7f7 !default;
                 .col-xs-2 {
                     cursor: pointer;
                     transition: all 0.5s;
+                    a {
+                        color: inherit;
+                        text-decoration: none;
+                    }
                     .icon {
                         width: 64px;
                         height: 64px;
@@ -1050,6 +1087,7 @@ $body-bg: #f7f7f7 !default;
                 &:focus {
                     color: lighten(#333333, 20%);
                     text-decoration: none;
+                    @include opacity(0.75);
                 }
                 p {
                     margin-top: -10px;
@@ -1243,7 +1281,16 @@ $body-bg: #f7f7f7 !default;
     &.area-dialog {
         border: none;
         border-radius: 3px;
-        
+    }
+}
+
+.ui-popup-bottom,
+.ui-popup-bottom-right,
+.ui-popup-bottom-left {
+    .area-dialog {
+        .ui-dialog-arrow-a {
+            border-bottom-color: #dddddd; 
+        }
     }
 }
 
@@ -1255,13 +1302,30 @@ $body-bg: #f7f7f7 !default;
         border:none;
         margin-bottom: 0px;
     }
+    height: 145px;
+    top: 40px;
+    transition: top 0.5s, height 0.5s; 
+    z-index: 100;
+    .container {
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        margin-left: -500px;
+    }
+    .navbar-static {
+        transition: margin-top 0.5s; 
+        margin-top: 0px;
+    }
     &.fix-top {
         position: fixed;
-        top: 81px;
+        top: 40px;
         width: 100%;
         z-index: 100;
+        height: 70px;
         .icon {
-            display: none;
+        }
+        .navbar-static {
+            margin-top: -80px;
         }
     }
 }
@@ -1318,6 +1382,67 @@ $body-bg: #f7f7f7 !default;
                         background-color: transparent;
                         color: #FF9A35;
                     }
+                }
+            }
+        }
+    }
+}
+
+.sitemap {
+    margin-top: -50px;
+    .col-main {
+        @include make-xs-column(12);
+        z-index: 101;
+        background-color: #fff;
+        h1 {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .padding-patch {
+            padding:  15px 35px 10px;
+            @include clearfix();
+        }
+        .breadcrumb-wrap {
+            a {
+                color: #666666;
+                font-size: 12px;
+                text-decoration: none;
+                &.last {
+                    color: #22a5d7;
+                }
+                .iconfont {
+                    margin-right: 5px;
+                }
+            }
+        }
+        .content {
+            @include make-xs-column(12);
+            @include clearfix();
+            clear: both;
+            padding-top: 30px;
+            margin-top: 12px;
+            border-top: 1px solid #22a5d7;
+            min-height: 600px;
+            .row {
+                margin-left: -12px;
+                margin-right: -12px;
+                .padding-patch {
+                    padding-left: 12px;
+                    padding-right: 12px;
+                }
+                .col-xs-2 {
+                    text-align: center;
+                    .btn {
+                        border-radius: 0px;
+                    }
+                    ul {
+                        li {
+                            a {
+                                color: inherit;
+                            }
+                        }
+                    }
+                    
                 }
             }
         }
@@ -1869,5 +1994,13 @@ $body-bg: #f7f7f7 !default;
                 }
             }
         }
+    }
+}
+
+.form-yuyue {
+    font-size: 12px;
+    font-family: $font-family-sans-serif;
+    label {
+        font-weight: normal;
     }
 }
