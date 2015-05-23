@@ -390,6 +390,7 @@ $body-bg: #f7f7f7 !default;
             line-height: 80px;
             font-size: 22px;
             margin: 0;
+            transition: height 0.5s,line-height 0.5s;
         }
         .tel {
             color: #FF9A35;
@@ -400,6 +401,7 @@ $body-bg: #f7f7f7 !default;
                 font-size: 20px;
                 margin-right: 15px;
             }
+            transition: height 0.5s, line-height 0.5s;
         }
         &.fix-top {
             position: fixed;
@@ -614,14 +616,22 @@ $body-bg: #f7f7f7 !default;
                     .icon {
                         width: 64px;
                         height: 64px;
-                        border: 2px solid #09BBFF;
-                        border-radius: 32px;
                         margin: 0 auto;
                         transition: all 0.5s;
+                        position: relative;
                         .iconfont {
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
                             color: #09BBFF;
                             font-size: 43px;
                             transition: all 0.5s;
+                            @include opacity(1);
+                            &.active {
+                                @include opacity(0);
+                            }
                         }
                     }
                     p {
@@ -637,10 +647,13 @@ $body-bg: #f7f7f7 !default;
                     &:hover {
                         color: #09BBFF;
                         .icon {
-                            background-color: #09BBFF;
                             transform: scale(1.2);
                             .iconfont {
+                                @include opacity(0);
                                 color: #ffffff;
+                                &.active {
+                                    @include opacity(1);
+                                }
                             }
                         }
                     }
@@ -678,6 +691,12 @@ $body-bg: #f7f7f7 !default;
                             padding-left: 20px;
                             padding-right: 20px;
                         }
+                    }
+                }
+                h2.title {
+                    > img {
+                        width: 50px;
+                        vertical-align: text-bottom;
                     }
                 }
             }
@@ -1342,15 +1361,26 @@ $body-bg: #f7f7f7 !default;
                     width: 64px;
                     height: 64px;
                     line-height: 64px;
-                    border: 2px solid #09BBFF;
-                    border-radius: 32px;
                     margin: 0 auto;
                     transition: all 0.5s;
                     margin-bottom: 10px;
+                    position: relative;
                     .iconfont {
                         color: #09BBFF;
                         font-size: 43px;
                         transition: all 0.5s;
+                    }
+                    img.iconfont {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        transition: opacity 0.5s;
+                        @include opacity(1);
+                        &.active {
+                            @include opacity(0);
+                        }
                     }
                 }
                 p {
@@ -1362,6 +1392,10 @@ $body-bg: #f7f7f7 !default;
                         border-color: #FF9A35;
                         .iconfont {
                             color: #FF9A35;
+                            @include opacity(0);
+                            &.active {
+                                @include opacity(1);
+                            }
                         }
                     }
                 }
@@ -1374,6 +1408,10 @@ $body-bg: #f7f7f7 !default;
                         border-color: #FF9A35;
                         .iconfont {
                             color: #FF9A35;
+                            @include opacity(0);
+                            &.active {
+                                @include opacity(1);
+                            }
                         }
                     }
                     &:hover,
