@@ -48,6 +48,7 @@ $body-bg: #f7f7f7 !default;
     border-radius: 0px;
 }
 
+
 #header {
     padding-top: 15px;
     padding-bottom: 6px;
@@ -703,8 +704,16 @@ $body-bg: #f7f7f7 !default;
             &.odd {
                 background-color: #f6f6f6;
             }
+            &.youshi,&.yetai,&.fuwu, &.ruzhuqiye, &.project-description {
+                h2.title {
+                    img.iconfont {
+                        height: 24px;
+                    }
+                }
+            }
             &.youshi {
                 padding-bottom: 20px;
+
                 .col-xs-3 {
                     cursor: pointer;
                     .iconfont {
