@@ -261,8 +261,7 @@
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>1万达商业管理有限公司</a></li>
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>1北京万达房地产有限公司</a></li>
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>1北京万达房地产有限公司</a></li>
-		                                <li><a href=""><i class="iconfont icon-jiantou"></i>1北京区域CBD万达广场商业管..</a></li>
-		                                <li><a href=""><i class="iconfont icon-jiantou"></i>1北京区域大湖万达物业管理有限</a></li>
+		                                
 		                            </ul>
 		                            <ul class="list-unstyled list-job jobs" id="company2">
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>2大连万达商业地产股份有限公司</a></li>
@@ -271,14 +270,12 @@
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>2北京万达房地产有限公司</a></li>
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>2北京区域CBD万达广场商业管..</a></li>
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>2北京区域大湖万达物业管理有限</a></li>
+                                        <li><a href=""><i class="iconfont icon-jiantou"></i>1北京区域CBD万达广场商业管..</a></li>
+                                        <li><a href=""><i class="iconfont icon-jiantou"></i>1北京区域大湖万达物业管理有限</a></li>
 		                            </ul>
 		                            <ul class="list-unstyled list-job jobs" id="company3">
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>3大连万达商业地产股份有限公司</a></li>
-		                                <li><a href=""><i class="iconfont icon-jiantou"></i>3万达商业管理有限公司</a></li>
-		                                <li><a href=""><i class="iconfont icon-jiantou"></i>3北京万达房地产有限公司</a></li>
-		                                <li><a href=""><i class="iconfont icon-jiantou"></i>3北京万达房地产有限公司</a></li>
-		                                <li><a href=""><i class="iconfont icon-jiantou"></i>3北京区域CBD万达广场商业管..</a></li>
-		                                <li><a href=""><i class="iconfont icon-jiantou"></i>3北京区域大湖万达物业管理有限</a></li>
+		                                
 		                            </ul>
 		                            <ul class="list-unstyled list-job jobs" id="company4">
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>4大连万达商业地产股份有限公司</a></li>
@@ -287,6 +284,11 @@
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>4北京万达房地产有限公司</a></li>
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>4北京区域CBD万达广场商业管..</a></li>
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>4北京区域大湖万达物业管理有限</a></li>
+                                        <li><a href=""><i class="iconfont icon-jiantou"></i>3万达商业管理有限公司</a></li>
+                                        <li><a href=""><i class="iconfont icon-jiantou"></i>3北京万达房地产有限公司</a></li>
+                                        <li><a href=""><i class="iconfont icon-jiantou"></i>3北京万达房地产有限公司</a></li>
+                                        <li><a href=""><i class="iconfont icon-jiantou"></i>3北京区域CBD万达广场商业管..</a></li>
+                                        <li><a href=""><i class="iconfont icon-jiantou"></i>3北京区域大湖万达物业管理有限</a></li>
 		                            </ul>
 		                            <ul class="list-unstyled list-job jobs" id="company5">
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>5大连万达商业地产股份有限公司</a></li>
@@ -303,6 +305,12 @@
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>6北京万达房地产有限公司</a></li>
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>6北京区域CBD万达广场商业管..</a></li>
 		                                <li><a href=""><i class="iconfont icon-jiantou"></i>6北京区域大湖万达物业管理有限</a></li>
+                                        <li><a href=""><i class="iconfont icon-jiantou"></i>6大连万达商业地产股份有限公司</a></li>
+                                        <li><a href=""><i class="iconfont icon-jiantou"></i>6万达商业管理有限公司</a></li>
+                                        <li><a href=""><i class="iconfont icon-jiantou"></i>6北京万达房地产有限公司</a></li>
+                                        <li><a href=""><i class="iconfont icon-jiantou"></i>6北京万达房地产有限公司</a></li>
+                                        <li><a href=""><i class="iconfont icon-jiantou"></i>6北京区域CBD万达广场商业管..</a></li>
+                                        <li><a href=""><i class="iconfont icon-jiantou"></i>6北京区域大湖万达物业管理有限</a></li>
 		                            </ul>
                             	</div>
                             </div>
@@ -374,21 +382,21 @@
     (function($) {
         $(document).ready(function() {
 
-        	function fixHeight() {
+        	function fixHeight(target) {
         		var h1 = $('.companys-wrap').height();
-        		var h2 = $('.jobs-wrap').height();
-        		$('.companys-wrap').height(h1 > h2 ? h1 : h2);
-        		$('.jobs-wrap').height(h1 > h2 ? h1 : h2);
+        		var h2 = $(target).height();
+                $('.jobs-wrap').velocity({
+                    height: h1 > h2 ? h1 : h2
+                },{queue: false}) 
         	}
-        	fixHeight();
-        	
+        	fixHeight('#company-1');
 
         	$('.companys li a').on('mouseover click', function(e){
         		e.preventDefault();
         		var target = $(this).attr('href');
         		$('.jobs').hide();
         		$(target).show();
-        		fixHeight();
+        		fixHeight(target);
         	});
         });
     })(jQuery);
