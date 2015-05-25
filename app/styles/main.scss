@@ -1922,6 +1922,7 @@ $body-bg: #f7f7f7 !default;
                 }
                 .jobs-wrap {
                     background: url(../images/bg03.png) repeat-y left top;
+                    overflow:hidden;
                 }
                 .jobs {
                     display: none;
