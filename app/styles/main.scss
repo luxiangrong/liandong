@@ -218,6 +218,7 @@ $body-bg: #f7f7f7 !default;
     .banner-image-wrap {
         overflow-x: hidden;
         position: relative;
+        min-width: 1019px;
         .controls {
             position: absolute;
             width: 100%;
@@ -319,7 +320,7 @@ $body-bg: #f7f7f7 !default;
         text-align: center;
         z-index: 100;
         background: url(../images/bg06.png) repeat-x left center;
-        
+        min-width: 1019px;
         .row {
             margin-top: 15px;
             .area {
