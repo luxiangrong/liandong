@@ -17,10 +17,22 @@
 
             currentIndex = currentIndex === -1 ? 0 : currentIndex;
 
-            $('.banner-image-wrap img').eq(currentIndex).velocity('fadeOut');
-            $('.banner-image-wrap img').eq((currentIndex + 1 ) % length).velocity('fadeIn');
-            $('.banner-image-wrap img').removeClass('current');
-            $('.banner-image-wrap img').eq((currentIndex + 1 ) % length).addClass('current');
+            $('.banner-image-wrap img').eq(currentIndex).animate({
+                opacity: 0
+            }, {
+                duration: 800,
+                complete: function() {
+                    $('.banner-image-wrap img').removeClass('current');
+                }
+            });
+            $('.banner-image-wrap img').eq((currentIndex + 1 ) % length).animate({
+                opacity: 1
+            },{
+                duration: 800,
+                complete: function(){
+                    $('.banner-image-wrap img').eq((currentIndex + 1 ) % length).addClass('current');
+                }
+            });
         };
         var prevBanner = function() {
             var length = $('.banner-image-wrap img').length;
@@ -30,10 +42,22 @@
             var currentIndex = $('.banner-image-wrap img.current').index();
             currentIndex = currentIndex === -1 ? 0 : currentIndex;
 
-            $('.banner-image-wrap img').eq(currentIndex).velocity('fadeOut');
-            $('.banner-image-wrap img').eq((currentIndex - 1 ) % length).velocity('fadeIn');
-            $('.banner-image-wrap img').removeClass('current');
-            $('.banner-image-wrap img').eq((currentIndex - 1 ) % length).addClass('current');
+            $('.banner-image-wrap img').eq(currentIndex).animate({
+                opacity: 0
+            }, {
+                duration: 800,
+                complete: function() {
+                    $('.banner-image-wrap img').removeClass('current');
+                }
+            });
+            $('.banner-image-wrap img').eq((currentIndex - 1 ) % length).animate({
+                opacity: 1
+            },{
+                duration: 800,
+                complete: function(){
+                    $('.banner-image-wrap img').eq((currentIndex - 1 ) % length).addClass('current');
+                }
+            });
         };
         var bannerSwitchHandler = window.setInterval(function(){
             nextBanner();
@@ -150,6 +174,7 @@
         var buildNewsSlider = function() {
             var newsItemHeight = $('.news').find('.slide li').height();
             var newsItemCount = $('.news').find('.slide li').length;
+            $('.news .slide').append($('.news').find('.slide li').clone());
             $('.news').find('.slide').height(newsItemHeight);
             $('.news .controls .next').on('click', function() {
                 var $newsElement = $(this).closest('.news');
@@ -173,8 +198,25 @@
                 var $newsElement = $('.news');
                 var current = $newsElement.data('current') || 0;
                 current++;
-                current = current % newsItemCount;
-                $newsElement.find('.slide li').css('top', -newsItemHeight * current + 'px');
+
+                console.log(current);
+                if(current == newsItemCount) {
+                    console.log('linjie');
+                    $newsElement.find('.slide li').css('top', -newsItemHeight * current + 'px');
+                    window.setTimeout(function(){
+                        $newsElement.find('.slide li').addClass('no-transition');
+                        $newsElement.find('.slide li').css('top', '0px')
+                        window.setTimeout(function(){
+                            $newsElement.find('.slide li').removeClass('no-transition');
+                        }, 500);
+                    }, 500);
+                    current = 0;
+                } else {
+                    $newsElement.find('.slide li').css('top', -newsItemHeight * current + 'px');
+                }
+
+                // current = current % newsItemCount;
+                // $newsElement.find('.slide li').css('top', -newsItemHeight * current + 'px');
                 $newsElement.data('current', current);
             }, 3000);
         };

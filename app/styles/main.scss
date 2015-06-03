@@ -247,7 +247,7 @@ $body-bg: #f7f7f7 !default;
             left: 50%;
             width: 1900px;
             margin-left: -950px;
-            display: none;
+            // display: none;
             @include opacity(0);
             &.current {
                 @include opacity(1);
@@ -367,6 +367,7 @@ $body-bg: #f7f7f7 !default;
         padding-top: 1px;
         li {
             position: relative;
+            top: 0px;
             transition: top 0.5s;
             color: #999999;
             .item {
@@ -375,6 +376,9 @@ $body-bg: #f7f7f7 !default;
             .date {
                 margin-left: 20px;
                 color: #666666;
+            }
+            &.no-transition {
+                transition: none;
             }
         }
         
