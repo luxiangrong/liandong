@@ -1129,6 +1129,112 @@ $body-bg: #f7f7f7 !default;
             }
         }
     }
+    &.changfang {
+        .navbar-scrollspy {
+            position: fixed;
+            top: 50%;
+            right: 10px;
+            width: 28px;
+            background-color: #f2f2f2;
+            border-radius: 14px; 
+            padding-top: 10px;
+            padding-bottom: 10px;
+            ul.nav {
+                > li {
+                    > a {
+                        display: block;
+                        padding: 0;
+                        margin: 10px auto;
+                        width: 14px;
+                        height: 14px;
+                        background-color: #dbdbdb;
+                        border-radius: 7px;
+                    }
+                    &.active {
+                        > a {
+                            background-color: #d95513;
+                        }
+                    }
+                    &:hover {
+                        > a {
+                            background-color: #d69777;
+                        }
+                    }
+                }
+            }
+        }
+
+        .odd {
+            background-color: #f2f2f2;
+        }
+        .even {
+            background-color: #fff;
+        }
+        .content-carousel {
+            .owl-carousel  {
+                .owl-controls {
+                    @include opacity(0);
+                    margin-top: 0;
+                    .owl-buttons {
+                        .owl-prev, .owl-next {
+                            position: absolute;
+                            top: 50%;
+                            margin-top: -40px;
+                            width: 41px;
+                            height: 81px;
+                        }
+                        .owl-prev {
+                            background: url(../images/icon33.png) no-repeat center center;
+                            left: -45px;
+                        }
+                        .owl-next {
+                            background: url(../images/icon34.png) no-repeat center center;
+                            right: -45px;
+                        }
+                    }
+                }
+            }
+            &.odd {
+                .owl-carousel  {
+                    .owl-controls {
+                        .owl-buttons {
+                            .owl-prev {
+                                background: url(../images/icon33.png) no-repeat center center;
+                                left: -45px;
+                            }
+                            .owl-next {
+                                background: url(../images/icon34.png) no-repeat center center;
+                                right: -45px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.even {
+                .owl-carousel  {
+                    .owl-controls {
+                        .owl-buttons {
+                            .owl-prev {
+                                background: url(../images/icon35.png) no-repeat center center;
+                                left: -45px;
+                            }
+                            .owl-next {
+                                background: url(../images/icon36.png) no-repeat center center;
+                                right: -45px;
+                            }
+                        }
+                    }
+                }
+            }
+            &:hover {
+                .owl-carousel  {
+                    .owl-controls {
+                        @include opacity(1);
+                    }
+                }
+            }
+        }
+    }
 }
 
 .hot-sales {
@@ -2055,5 +2161,38 @@ $body-bg: #f7f7f7 !default;
     font-family: $font-family-sans-serif;
     label {
         font-weight: normal;
+    }
+}
+
+.side-tool {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    display: none;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            margin-bottom: 5px;
+            width: 32px;
+            a {
+
+            }
+            &:hover {
+                @include opacity(0.75);
+            }
+            &.yongjin {
+                a {
+                    display: block;
+                    text-align: center;
+                    white-space: 10px;
+                    padding: 10px 3px;
+                    color: #fff;
+                    text-decoration: none;
+                    background-color: #FF9A35;
+                }
+            }
+        }
     }
 }

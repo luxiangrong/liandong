@@ -1,0 +1,602 @@
+<!doctype html>
+<html class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>厂房租售</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/art-dialog/css/ui-dialog.css" />
+    <link rel="stylesheet" href="bower_components/OwlCarousel/owl-carousel/owl.carousel.css" />
+    <link rel="stylesheet" href="bower_components/OwlCarousel/owl-carousel/owl.theme.css" />
+    <link rel="stylesheet" href="bower_components/OwlCarousel/owl-carousel/owl.transitions.css" />
+    <link rel="stylesheet" href="bower_components/fancybox/source/jquery.fancybox.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+    <!-- build:js scripts/vendor/modernizr.js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+</head>
+
+<body data-spy="scroll" data-target="#page-nav" data-offset="200">
+    <!--[if lt IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="side-tool">
+    	<ul>
+    		<li class="tel">
+    			<a href="#"><img src="images/sprite-32-6.png" alt=""></a>
+    		</li>
+    		<li class="qq">
+    			<a href="#"><img src="images/sprite-32-7.png" alt=""></a>
+    		</li>
+    		<li class="edit">
+    			<a href="#"><img src="images/sprite-32-8.png" alt=""></a>
+    		</li>
+    		<li class="delete">
+    			<a href="#"><img src="images/sprite-32-9.png" alt=""></a>
+    		</li>
+    		<li class="down">
+    			<a href="#"><img src="images/sprite-32-10.png" alt=""></a>
+    		</li>
+    		<li class="yongjin">
+    			<a href="#">我要赚佣金</a>
+    		</li>
+    	</ul>
+    </div>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <ul class="nav nav-pills cities pull-right">
+                    <li class="active">
+                        <a href="#"><img src="images/icon24.png" alt="" class="iconfont icon-tiantan">北京</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="glyphicon glyphicon-triangle-right"></i>天津</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="glyphicon glyphicon-triangle-right"></i>上海</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="glyphicon glyphicon-triangle-right"></i>沈阳</a>
+                    </li>
+                    <li class="switch-city">
+                        <a href="#" class="">[切换城市]</a>
+                        <div class="other-cities">
+                            <span class="top-jiantou"></span>
+                            <dl>
+                                <dt>A-G</dt>
+                                <dd>
+                                    <a href="">北京</a>
+                                    <a href="">天津</a>
+                                    <a href="">上海</a>
+                                    <a href="">无锡</a>
+                                    <a href="">沈阳</a>
+                                    <a href="">大连</a>
+                                    <a href="">合肥</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>H-J</dt>
+                                <dd>
+                                    <a href="">宁波</a>
+                                    <a href="">重庆</a>
+                                    <a href="">南京</a>
+                                    <a href="">长沙</a>
+                                    <a href="">济南</a>
+                                    <a href="">郑州</a>
+                                    <a href="">广州</a>
+                                    <a href="">湖州</a>
+                                    <a href="">唐山</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>L-S</dt>
+                                <dd>
+                                    <a href="">北京</a>
+                                    <a href="">天津</a>
+                                    <a href="">上海</a>
+                                    <a href="">无锡</a>
+                                    <a href="">沈阳</a>
+                                    <a href="">大连</a>
+                                    <a href="">合肥</a>
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>H-J</dt>
+                                <dd>
+                                    <a href="">宁波</a>
+                                    <a href="">重庆</a>
+                                    <a href="">南京</a>
+                                    <a href="">长沙</a>
+                                    <a href="">济南</a>
+                                    <a href="">郑州</a>
+                                    <a href="">广州</a>
+                                    <a href="">湖州</a>
+                                    <a href="">唐山</a>
+                                </dd>
+                            </dl>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="pull-left logo">
+                <a href="home-1.html"><img src="images/logo.png" /></a>
+            </div>
+            <nav class="">
+                <ul class="nav nav-pills main-nav directive pull-right">
+                    <li class="active">
+                        <a href="#">首页</a>
+                    </li>
+                    <li class="split"></li>
+                    <li>
+                        <a href="#">厂房租售</a>
+                    </li>
+                    <li class="split"></li>
+                    <li>
+                        <a href="#">研发办公租售</a>
+                    </li>
+                    <li class="split"></li>
+                    <li>
+                        <a href="#">定制服务</a>
+                    </li>
+                    <li class="split"></li>
+                    <li>
+                        <a href="#">园区服务</a>
+                    </li>
+                    <li class="split"></li>
+                    <li>
+                        <a href="">关于我们</a>
+                    </li>
+                    <li class="directive-bar"><i class="glyphicon glyphicon-triangle-top"></i></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="border-bottom"></div>
+        <div class="border-bottom"></div>
+    </header>
+    <section id="banner">
+        <div class="banner-image-wrap h460 changfang">
+            <img src="images/banner_1900x460_01.jpg" class="current" />
+        </div>
+    </section>
+    <section class="main-content changfang">
+    	<div class="navbar navbar-scrollspy" id="page-nav">
+            <ul class="nav nav-stacked">
+                <li class="active">
+                    <a href="#scrollspy-1">
+                    </a>
+                </li>
+                <li>
+                    <a href="#scrollspy-2">
+                    </a>
+                </li>
+                <li>
+                    <a href="#scrollspy-3">
+                    </a>
+                </li>
+                <li>
+                    <a href="#scrollspy-4">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="content-carousel odd" id="scrollspy-1">
+            <div class="container">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    <div class="item"><img src="images/pic45.png" alt="Pic1"></div>
+                    <div class="item"><img src="images/pic45.png" alt="Pic2"></div>
+                    <div class="item"><img src="images/pic45.png" alt="Pic3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="content-carousel even" id="scrollspy-2">
+            <div class="container">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    <div class="item"><img src="images/pic46.png" alt="Pic1"></div>
+                    <div class="item"><img src="images/pic46.png" alt="Pic2"></div>
+                    <div class="item"><img src="images/pic46.png" alt="Pic3"></div>
+                </div>
+            </div>
+        </div>
+        <div class="content-carousel odd" id="scrollspy-3">
+            <div class="container">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    <div class="item"><img src="images/pic47.png" alt="Pic1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="content-carousel even" id="scrollspy-4">
+            <div class="container">
+                <div id="owl-demo" class="owl-carousel owl-theme">
+                    <div class="item"><img src="images/pic48.png" alt="Pic1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="changfangbuju">
+            <div class="row area-nav">
+                <h2 class="title"><i class="iconfont icon-buju"></i>厂房全国布局</h2>
+                <div class="col-xs-2">
+                    <a href="#huabei">
+                        <img src="images/sprite-100-7.png" alt="" class="iconfont">
+                        <p>华北区</p>
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="#huadong">
+                        <img src="images/sprite-100-8.png" alt="" class="iconfont">
+                        <p>华东区</p>
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="#dongbei">
+                        <img src="images/sprite-100-9.png" alt="" class="iconfont">
+                        <p>东北区</p>
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="#huazhong">
+                        <img src="images/sprite-100-10.png" alt="" class="iconfont">
+                        <p>华中区</p>
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="#huanan">
+                        <img src="images/sprite-100-11.png" alt="" class="iconfont">
+                        <p>华南区</p>
+                    </a>
+                </div>
+                <div class="col-xs-2">
+                    <a href="#xinan">
+                        <img src="images/sprite-100-12.png" alt="" class="iconfont">
+                        <p>西南区</p>
+                    </a>
+                </div>
+            </div>
+            <div class="row project-list">
+                <h2 id="huabei" class="title"><img class="iconfont" src="images/sprite-100-13.png" />华北区</h2>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic02.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic03.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic04.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic02.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic03.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic04.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row project-list">
+                <h2 id="huadong" class="title"><img class="iconfont" src="images/sprite-100-14.png" />华东区</h2>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic02.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic03.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic04.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic02.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic03.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic04.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row project-list">
+                <h2 id="dongbei" class="title"><img class="iconfont" src="images/sprite-100-15.png" />东北区</h2>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic02.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic03.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic04.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic02.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic03.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="thumbnail">
+                        <img src="images/pic04.jpg" />
+                        <div class="caption">
+                            <h3>联东U谷﹒天津北方耀谷</h3>
+                            <p>北辰区800-4000大产权标准化厂房</p>
+                            <h4>VIP专线：400-808-8855转223</h4>
+                            <div class="btn-wrap">
+                                <a href="#" class="btn btn-sm btn-a">查看项目</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="container">
+            <div class="boxsizing-patch">
+                <div class="row">
+                    <div class="col-xs-9">
+                        <ul class="sitemap">
+                            <li><a href="#">网站地图</a> </li>
+                            <li>|</li>
+                            <li><a href="#">使用条款</a> </li>
+                            <li>|</li>
+                            <li><a href="#">法律声明</a> </li>
+                            <li>|</li>
+                            <li><a href="#">客户服务</a> </li>
+                            <li>|</li>
+                            <li><a href="#">合作洽谈</a> </li>
+                        </ul>
+                        <div class="row  contact-info">
+                            <div class="col-xs-2">
+                                <img src="images/logo02.png" />
+                            </div>
+                            <div class="col-xs-9">
+                                <p>地址：北京市亦庄产业园光机电一体化产业基地经海7路1号联东商务中心</p>
+                                <p>电话：010-80806501 传真：010-80806800 邮编：101111</p>
+                            </div>
+                        </div>
+                        <p class="copyright">京ICP备09123452号 COPYRIGHT © 2014LIANDO.ALL RIGHTS RESERVED 北京联东投资（集团）有限公司版权所有 </p>
+                    </div>
+                    <div class="col-xs-3 qr-wrap">
+                        <div class="col-xs-6">
+                            <img src="images/qr01.jpg" />
+                            <p>移动官网</p>
+                        </div>
+                        <div class="col-xs-6">
+                            <img src="images/qr02.jpg" ／>
+                            <p>官方微信</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/velocity/velocity.js"></script>
+    <script src="bower_components/velocity/velocity.ui.js"></script>
+    <script src="bower_components/art-dialog/dist/dialog.js"></script>
+    <script src="bower_components/art-dialog/dist/dialog-plus.js"></script>
+    <script src="bower_components/OwlCarousel/owl-carousel/owl.carousel.js"></script>
+    <script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="bower_components/fancybox/source/jquery.fancybox.js"></script>
+    <script src="bower_components/fancybox/source/jquery.fancybox.pack.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:js({app,.tmp}) scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+    <script>
+    (function($) {
+        $(document).ready(function() {
+            $(".area-nav a").on('click', function(e) {
+                e.preventDefault();
+                var target = $(this).attr('href');
+                $(target).velocity('scroll', {
+                    offset: -20
+                });
+            });
+            $(".owl-carousel").owlCarousel({
+			      navigation : true, // Show next and prev buttons
+			      slideSpeed : 300,
+			      paginationSpeed : 400,
+			      singleItem:true,
+			      transitionStyle : "fade",
+			      pagination: false,
+			      navigationText: false,
+			      autoPlay: false
+			  });
+
+            var winHeight = $(window).height();
+            $(window).on('scroll', function(){
+            	if($(this).scrollTop() > $('#changfangbuju').offset().top - winHeight/2) {
+            		$('#page-nav').hide();
+            		$('.side-tool').show();
+            	} else {
+            		$('#page-nav').show();
+            		$('.side-tool').hide();
+            	}
+            });
+        });
+    })(jQuery);
+    </script>
+</body>
+
+</html>
