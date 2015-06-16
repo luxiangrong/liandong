@@ -25,10 +25,33 @@
     <!-- endbuild -->
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#page-nav" data-offset="200">
     <!--[if lt IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <div class="side-tool">
+        <ul>
+            <li class="tel">
+                <a href="#"><img src="images/sprite-32-6.png" alt=""></a>
+            </li>
+            <li class="qq">
+                <a href="#"><img src="images/sprite-32-7.png" alt=""></a>
+            </li>
+            <li class="edit">
+                <a href="#"><img src="images/sprite-32-8.png" alt=""></a>
+            </li>
+            <li class="delete">
+                <a href="#"><img src="images/sprite-32-9.png" alt=""></a>
+            </li>
+            <li class="down">
+                <a href="#"><img src="images/sprite-32-10.png" alt=""></a>
+            </li>
+            <li class="yongjin">
+                <a href="#">我要赚佣金</a>
+            </li>
+        </ul>
+    </div>
+    <a href="javascript: void(0);" class="lift"></a>
     <header id="header">
         <div class="container">
             <nav>
@@ -142,17 +165,57 @@
     </header>
     <section id="banner">
         <div class="banner-image-wrap h460 changfang">
-            <img src="images/banner_1900x460_01.jpg" class="current"/>
+            <img src="images/banner_1900x460_01.jpg" class="current" />
         </div>
     </section>
-    <section class="main-content">
-        <div class="container">
-            <div class="row">
-                <h2 class="title"><img src="images/icon01.png" class="iconfont" alt="">厂房在线体验</h2>
-                <div class="video-wrap">
-                    <img src="images/pic05.jpg" alt="" />
-                </div>
+    <section class="main-content changfang">
+        <div class="navbar navbar-scrollspy" id="page-nav">
+            <ul class="nav nav-stacked">
+                <li>
+                    <a href="#scrollspy-1">
+                    </a>
+                </li>
+                <li>
+                    <a href="#scrollspy-2">
+                    </a>
+                </li>
+                <li>
+                    <a href="#scrollspy-3">
+                    </a>
+                </li>
+                <li>
+                    <a href="#scrollspy-4">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="content-carousel odd" id="scrollspy-1">
+            <div id="" class="owl-carousel owl-theme">
+                <div class="item"><img src="images/pic45.jpg" alt="Pic1"></div>
+                <div class="item"><img src="images/pic45.jpg" alt="Pic2"></div>
+                <div class="item"><img src="images/pic45.jpg" alt="Pic3"></div>
             </div>
+        </div>
+        <div class="content-carousel even" id="scrollspy-2">
+            <div id="" class="owl-carousel owl-theme">
+                <div class="item"><img src="images/pic46.jpg" alt="Pic1"></div>
+                <div class="item"><img src="images/pic46.jpg" alt="Pic2"></div>
+                <div class="item"><img src="images/pic46.jpg" alt="Pic3"></div>
+            </div>
+        </div>
+        <div class="content-carousel odd" id="scrollspy-3">
+            <div id="" class="owl-carousel owl-theme">
+                <div class="item"><img src="images/pic47.jpg" alt="Pic1"></div>
+                <div class="item"><img src="images/pic47.jpg" alt="Pic1"></div>
+            </div>
+        </div>
+        <div class="content-carousel even" id="scrollspy-4">
+            <div id="" class="owl-carousel owl-theme">
+                <div class="item"><img src="images/pic48.jpg" alt="Pic1"></div>
+                <div class="item"><img src="images/pic48.jpg" alt="Pic1"></div>
+            </div>
+        </div>
+        <div class="container" id="changfangbuju">
             <div class="row area-nav">
                 <h2 class="title"><i class="iconfont icon-buju"></i>厂房全国布局</h2>
                 <div class="col-xs-2">
@@ -498,10 +561,38 @@
     <script>
     (function($) {
         $(document).ready(function() {
-            $(".area-nav a").on('click', function(e){
+            $(".area-nav a").on('click', function(e) {
                 e.preventDefault();
                 var target = $(this).attr('href');
-                $(target).velocity('scroll',{offset: -20});
+                $(target).velocity('scroll', {
+                    offset: -20
+                });
+            });
+
+            $(".owl-carousel").owlCarousel({
+                navigation: true, // Show next and prev buttons
+                slideSpeed: 300,
+                paginationSpeed: 400,
+                singleItem: true,
+                transitionStyle: "fade",
+                pagination: false,
+                navigationText: false,
+                autoPlay: false,
+                addClassActive: true
+            });
+
+            $('.item img').on('load', function(e) {
+                $(this).closest('.item').height($(this).height());
+            });
+
+            $(window).on('scroll', function() {
+                if ($(this).scrollTop() > $('#changfangbuju').offset().top - $(window).height() / 2) {
+                    $('#page-nav').hide();
+                    $('.side-tool').show();
+                } else {
+                    $('#page-nav').show();
+                    $('.side-tool').hide();
+                }
             });
         });
     })(jQuery);
