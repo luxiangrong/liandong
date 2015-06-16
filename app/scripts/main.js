@@ -199,7 +199,6 @@
                 var current = $newsElement.data('current') || 0;
                 current++;
 
-                console.log(current);
                 if(current == newsItemCount) {
                     console.log('linjie');
                     $newsElement.find('.slide li').css('top', -newsItemHeight * current + 'px');
@@ -236,6 +235,19 @@
                     subNav.velocity('slideDown');
                 }
             }
+        });
+
+        $(window).on('scroll', function(){
+            if($(this).scrollTop() > $(window).height()/2) {
+                $('.lift').show();
+            } else {
+                $('.lift').hide();
+            }
+        });
+
+        $('.lift').on('click', function(e){
+            e.preventDefault();
+            $('body').velocity('scroll');
         });
     });
 })(jQuery);
