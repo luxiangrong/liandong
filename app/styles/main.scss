@@ -1999,7 +1999,11 @@ $body-bg: #f7f7f7 !default;
                     border-bottom: 1px dotted #dedede;
                     margin: 20px 0;
                 }
+                .row-list-job {
+                    background: url(../images/bg03.png) center center repeat-y;
+                }
                 .list-job {
+                    margin-bottom: 0;
                     li {
                         line-height: 30px;
                         border-bottom: 1px dotted #cccccc;
@@ -2023,7 +2027,16 @@ $body-bg: #f7f7f7 !default;
                                     background-color: #3ec5ff;
                                 }
                             }
+                            &.pull-right {
+                                margin-right: 10px;
+                            }
                         }
+                    }
+                    &.list-job-left {
+                        margin-right: 20px;
+                    }
+                    &.list-job-right {
+                        margin-left: 10px;
                     }
                 }
                 .nav-areas {
@@ -2047,13 +2060,19 @@ $body-bg: #f7f7f7 !default;
                     font-weight: bold;
                     padding-left: 2em;
                 }
+                .companys-wrap {
+                    .list-job {
+                        margin-right: 20px;
+                    }
+                }
                 .jobs-wrap {
-                    background: url(../images/bg03.png) repeat-y left top;
                     overflow:hidden;
+                    .list-job {
+                        margin-left: 10px;
+                    }
                 }
                 .jobs {
                     display: none;
-                    padding-left: 50px;
                 }
                 dl {
                     margin-top: 30px;
