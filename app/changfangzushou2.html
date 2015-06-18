@@ -25,17 +25,28 @@
     <!-- endbuild -->
 </head>
 
-<body data-spy="scroll" data-target="#page-nav" data-offset="200">
+<body data-spy="scroll" data-target="#page-nav" data-offset="100">
     <!--[if lt IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div class="side-tool">
         <ul>
             <li class="tel">
-                <a href="#"><img src="images/sprite-32-6.png" alt=""></a>
+                <a href="#">
+                    <img src="images/sprite-32-6.png" alt="">
+                    <div class="extra">010-80806666</div>
+                </a>
             </li>
             <li class="qq">
                 <a href="#"><img src="images/sprite-32-7.png" alt=""></a>
+            </li>
+            <li class="wx">
+                <a href="#">
+                    <img src="images/sprite-32-11.png" alt="">
+                    <div class="extra">
+                        <img src="images/qr04.jpg" alt="">
+                    </div>
+                </a>
             </li>
             <li class="edit">
                 <a href="#"><img src="images/sprite-32-8.png" alt=""></a>
@@ -47,7 +58,11 @@
                 <a href="#"><img src="images/sprite-32-10.png" alt=""></a>
             </li>
             <li class="yongjin">
-                <a href="#">我要赚佣金</a>
+                <a href="#">我要赚佣金
+                    <div class="extra">
+                        <img src="images/qr04.jpg" alt="">
+                    </div>
+                </a>
             </li>
         </ul>
     </div>
@@ -587,11 +602,11 @@
 
             $(window).on('scroll', function() {
                 if ($(this).scrollTop() > $('#changfangbuju').offset().top - $(window).height() / 2) {
-                    $('#page-nav').hide();
-                    $('.side-tool').show();
+                    $('#page-nav').fadeOut();
+                    $('.side-tool').fadeIn();
                 } else {
-                    $('#page-nav').show();
-                    $('.side-tool').hide();
+                    $('#page-nav').fadeIn();
+                    $('.side-tool').fadeOut();
                 }
             });
         });

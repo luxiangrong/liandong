@@ -2212,11 +2212,24 @@ $body-bg: #f7f7f7 !default;
         li {
             margin-bottom: 5px;
             width: 32px;
+            @include opacity(0.8);
             a {
-
+                position: relative;
+                .extra {
+                    position: absolute;
+                    top: -7px;
+                    right: 32px;
+                    overflow: hidden;
+                    @include opacity(0); 
+                }
+                &:hover {
+                    .extra {
+                        @include opacity(1);
+                    }
+                }
             }
             &:hover {
-                @include opacity(0.75);
+                @include opacity(1);
             }
             &.yongjin {
                 a {
@@ -2227,6 +2240,24 @@ $body-bg: #f7f7f7 !default;
                     color: #fff;
                     text-decoration: none;
                     background-color: #FF9A35;
+                    .extra {
+                        top: 0px;
+                    }
+                }
+            }
+            &.tel {
+                a {
+                    .extra {
+                        background-color: #fdb66f;
+                        color: #ffffff;
+                        font-size: 18px;
+                        line-height: 32px;
+                        padding: 0 10px;
+                        white-space: nowrap;
+                    }
+                    &:hover {
+                        
+                    }
                 }
             }
         }
