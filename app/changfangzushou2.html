@@ -207,8 +207,6 @@
         <div class="content-carousel odd" id="scrollspy-1">
             <div id="" class="owl-carousel owl-theme">
                 <div class="item"><img src="images/pic45.jpg" alt="Pic1"></div>
-                <div class="item"><img src="images/pic45.jpg" alt="Pic2"></div>
-                <div class="item"><img src="images/pic45.jpg" alt="Pic3"></div>
             </div>
         </div>
         <div class="content-carousel even" id="scrollspy-2">
@@ -584,21 +582,38 @@
                 });
             });
 
-            $(".owl-carousel").owlCarousel({
-                navigation: true, // Show next and prev buttons
-                slideSpeed: 300,
-                paginationSpeed: 400,
-                singleItem: true,
-                transitionStyle: "fade",
-                pagination: false,
-                navigationText: false,
-                autoPlay: false,
-                addClassActive: true
+            $('.owl-carousel').each(function(i, item) {
+                if ($(this).find('img').length > 1) {
+                    $(this).owlCarousel({
+                        navigation: true, // Show next and prev buttons
+                        slideSpeed: 300,
+                        paginationSpeed: 400,
+                        singleItem: true,
+                        transitionStyle: "backSlide",
+                        pagination: false,
+                        navigationText: false,
+                        autoPlay: true,
+                        addClassActive: true
+                    });
+                } else {
+                    $(this).owlCarousel({
+                        navigation: true, // Show next and prev buttons
+                        slideSpeed: 300,
+                        paginationSpeed: 400,
+                        singleItem: true,
+                        transitionStyle: "backSlide",
+                        pagination: false,
+                        navigationText: false,
+                        autoPlay: false,
+                        addClassActive: true
+                    });
+                }
             });
+
 
             $('.item img').on('load', function(e) {
                 $(this).closest('.item').height($(this).height());
-            });
+            }).trigger('load');
 
             $(window).on('scroll', function() {
                 if ($(this).scrollTop() > $('#changfangbuju').offset().top - $(window).height() / 2) {

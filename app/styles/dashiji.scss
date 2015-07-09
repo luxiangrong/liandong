@@ -1,0 +1,55 @@
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+.timeline {
+    @include clearfix();
+    position: relative;
+    background: url(../images/timeline_bg.png) no-repeat 100px top;
+    padding-left: 130px;
+    padding-bottom: 30px;
+    .date {
+        color: #ff9a35;
+        font-size: 12px;
+        position: absolute;
+        right: 620px;
+        top: 0px;
+    }
+    .pic {
+        width: 165px;
+        float: left;
+        margin-right: 20px;
+    }
+    .caption {
+        overflow: hidden;
+        h4 {
+            margin-top: 0;
+            font-size: 14px;
+        }
+        p {
+            font-size: 12px;
+            color: #666666;
+            line-height: 1.8;
+        }
+    }
+    &.timeline-year {
+        height: 50px;
+        background-position: 100px -20px;
+        .date {
+            color: #28b7ee;
+            font-size: 16px;
+            left: 0px;
+            right: auto;
+        }
+    }
+    &.timeline-title {
+        height: 50px;
+        background: url(../images/timeline_bg2.png) no-repeat 92px top;
+        .title {
+            left: 120px;
+            top: 0px;
+            font-size: 20px;
+            color: #28b7ee;
+        }
+    }
+    &.last {
+        padding-bottom: 5px;
+    }
+}
