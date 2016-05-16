@@ -191,49 +191,49 @@
                 <div role="tabpanel">
                     <ul class="nav nav-tabs">
                         <li role="presentation" class="active">
-                            <a href="#tab-1" role="tab" data-toggle="tab">
+                            <a href="#tab-1" role="tab" data-target="hongdong-1">
                                 <img src="images/p02.png" alt="" class="iconfont">
                                 <img src="images/p08.png" alt="" class="iconfont active">
                                 <p>企业家活动</p>
                             </a>
                         </li>
                         <li role="presentation">
-                            <a href="#tab-2" role="tab" data-toggle="tab">
+                            <a href="#tab-2" role="tab"  data-target="hongdong-2">
                                 <img src="images/p03.png" alt="" class="iconfont">
                                 <img src="images/p09.png" alt="" class="iconfont active">
                                 <p>人才招聘</p>
                             </a>
                         </li>
                         <li role="presentation">
-                            <a href="#tab-3" role="tab" data-toggle="tab">
+                            <a href="#tab-3" role="tab"  data-target="hongdong-3">
                                 <img src="images/p04.png" alt="" class="iconfont">
                                 <img src="images/p10.png" alt="" class="iconfont active">
                                 <p>政策辅导</p>
                             </a>
                         </li>
                         <li role="presentation">
-                            <a href="#tab-4" role="tab" data-toggle="tab">
+                            <a href="#tab-4" role="tab" data-target="hongdong-4">
                                 <img src="images/p05.png" alt="" class="iconfont">
                                 <img src="images/p11.png" alt="" class="iconfont active">
                                 <p>专业培训</p>
                             </a>
                         </li>
                         <li role="presentation">
-                            <a href="#tab-5" role="tab" data-toggle="tab">
+                            <a href="#tab-5" role="tab" data-target="hongdong-5">
                                 <img src="images/p06.png" alt="" class="iconfont">
                                 <img src="images/p12.png" alt="" class="iconfont active">
                                 <p>团购/IT服务</p>
                             </a>
                         </li>
                         <li role="presentation">
-                            <a href="#tab-6" role="tab" data-toggle="tab">
+                            <a href="#tab-6" role="tab" data-target="hongdong-6">
                                 <img src="images/p07.png" alt="" class="iconfont">
                                 <img src="images/p13.png" alt="" class="iconfont active">
                                 <p>文化活动</p>
                             </a>
                         </li>
                     </ul>
-                    <h2 class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
+                    <h2 id="hongdong-1" class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
                     <div class="row huodong-list">
                         <div class="col-xs-4 item">
                             <a href="">
@@ -281,7 +281,7 @@
                             </a>
                         </div>
                     </div>
-                    <h2 class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
+                    <h2 id="hongdong-2" class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
                     <div class="row huodong-list">
                         <div class="col-xs-4 item">
                             <a href="">
@@ -329,7 +329,7 @@
                             </a>
                         </div>
                     </div>
-                    <h2 class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
+                    <h2 id="hongdong-3" class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
                     <div class="row huodong-list">
                         <div class="col-xs-4 item">
                             <a href="">
@@ -377,7 +377,7 @@
                             </a>
                         </div>
                     </div>
-                    <h2 class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
+                    <h2 id="hongdong-4" class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
                     <div class="row huodong-list">
                         <div class="col-xs-4 item">
                             <a href="">
@@ -425,7 +425,7 @@
                             </a>
                         </div>
                     </div>
-                    <h2 class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
+                    <h2 id="hongdong-5" class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
                     <div class="row huodong-list">
                         <div class="col-xs-4 item">
                             <a href="">
@@ -473,7 +473,7 @@
                             </a>
                         </div>
                     </div>
-                    <h2 class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
+                    <h2 id="hongdong-6" class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
                     <div class="row huodong-list">
                         <div class="col-xs-4 item">
                             <a href="">
@@ -601,6 +601,10 @@
                 addClassActive: true
             });
 
+            $('.nav-tabs [data-target]').on('click', function(e){
+                e.preventDefault();
+                $('#' + $(this).attr('data-target')).velocity('scroll');
+            })
         });
     })(jQuery);
     </script>
