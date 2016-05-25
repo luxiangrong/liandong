@@ -2397,6 +2397,29 @@ $body-bg: #f7f7f7 !default;
     .owl-controls {
         position: absolute;
         top: 50%;
-        margin-top: -10px;
+        margin-top: -40px;
+        width: 100%;
+        .owl-buttons {
+            position: relative;
+            width: 100%;
+            .owl-prev,
+            .owl-next {
+                position: absolute;
+                border-radius: 0px;
+                width: 31px;
+                height: 61px;
+                text-align: center;
+                background-color: transparent;
+                padding: 0;
+            }
+            .owl-prev {
+                left: 100px;
+                background: url(../images/p18.png) no-repeat center center;
+            }
+            .owl-next {
+                right: 100px;
+                background: url(../images/p19.png) no-repeat center center;
+            }
+        }
     }
 }
