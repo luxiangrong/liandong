@@ -1025,6 +1025,24 @@ $body-bg: #f7f7f7 !default;
             }
             &.ruanxingfuwu {
                 border-bottom: 1px solid #E5E5E5;
+                &.nav-tabs-fixed {
+                    padding-top: 154px;
+                    .nav-tabs {
+                        position: fixed;
+                        top: 0;
+                        left: 50%;
+                        width: 980px;
+                        margin-left: -490px;
+                        z-index: 1000;
+                        // padding-top: 0;
+                        // a {
+                        //     padding-top: 0;
+                        // }
+                        // .iconfont {
+                        //     display: none;
+                        // }
+                    }
+                }
                 .pagination {
                     li {
                         &.ellipsis {
@@ -2255,6 +2273,8 @@ $body-bg: #f7f7f7 !default;
         }
     }
 }
+
+
 
 .owl-carousel-2 {
     .owl-controls {

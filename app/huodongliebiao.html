@@ -281,7 +281,7 @@
                             </a>
                         </div>
                     </div>
-                    <h2 id="hongdong-2" class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
+                    <h2 id="hongdong-2" class="title">人才招聘 <a href="" class="more pull-right">MORE</a></h2>
                     <div class="row huodong-list">
                         <div class="col-xs-4 item">
                             <a href="">
@@ -329,7 +329,7 @@
                             </a>
                         </div>
                     </div>
-                    <h2 id="hongdong-3" class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
+                    <h2 id="hongdong-3" class="title">政策辅导 <a href="" class="more pull-right">MORE</a></h2>
                     <div class="row huodong-list">
                         <div class="col-xs-4 item">
                             <a href="">
@@ -377,7 +377,7 @@
                             </a>
                         </div>
                     </div>
-                    <h2 id="hongdong-4" class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
+                    <h2 id="hongdong-4" class="title">专业培训 <a href="" class="more pull-right">MORE</a></h2>
                     <div class="row huodong-list">
                         <div class="col-xs-4 item">
                             <a href="">
@@ -425,7 +425,7 @@
                             </a>
                         </div>
                     </div>
-                    <h2 id="hongdong-5" class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
+                    <h2 id="hongdong-5" class="title">团购/IT服务 <a href="" class="more pull-right">MORE</a></h2>
                     <div class="row huodong-list">
                         <div class="col-xs-4 item">
                             <a href="">
@@ -473,7 +473,7 @@
                             </a>
                         </div>
                     </div>
-                    <h2 id="hongdong-6" class="title">企业家活动 <a href="" class="more pull-right">MORE</a></h2>
+                    <h2 id="hongdong-6" class="title">文化活动 <a href="" class="more pull-right">MORE</a></h2>
                     <div class="row huodong-list">
                         <div class="col-xs-4 item">
                             <a href="">
@@ -603,7 +603,44 @@
 
             $('.nav-tabs [data-target]').on('click', function(e){
                 e.preventDefault();
-                $('#' + $(this).attr('data-target')).velocity('scroll');
+                $('.nav-tabs > li').removeClass('active');
+                $(this).parent().addClass('active');
+                $('#' + $(this).attr('data-target')).velocity('scroll', {
+                    "offset": -174
+                });
+            })
+            $(window).on('scroll', function(e) {
+                var wScrollTop = $(window).scrollTop();
+                if(wScrollTop > $('.main-content').offset().top) {
+                    $('.ruanxingfuwu').addClass('nav-tabs-fixed');
+                } else {
+                    $('.ruanxingfuwu').removeClass('nav-tabs-fixed');
+                }
+                wScrollTop = wScrollTop + 380;
+                if(wScrollTop <= $('#hongdong-2').offset().top) {
+                    $('.nav-tabs > li').removeClass('active');
+                    $('.nav-tabs [data-target="hongdong-1"]').parent().addClass('active');
+                }
+                if(wScrollTop > $('#hongdong-2').offset().top && wScrollTop <= $('#hongdong-3').offset().top) {
+                    $('.nav-tabs > li').removeClass('active');
+                    $('.nav-tabs [data-target="hongdong-2"]').parent().addClass('active');
+                }
+                if(wScrollTop > $('#hongdong-3').offset().top && wScrollTop <= $('#hongdong-4').offset().top) {
+                    $('.nav-tabs > li').removeClass('active');
+                    $('.nav-tabs [data-target="hongdong-3"]').parent().addClass('active');
+                }
+                if(wScrollTop > $('#hongdong-4').offset().top && wScrollTop <= $('#hongdong-5').offset().top) {
+                    $('.nav-tabs > li').removeClass('active');
+                    $('.nav-tabs [data-target="hongdong-4"]').parent().addClass('active');
+                }
+                if(wScrollTop > $('#hongdong-5').offset().top && wScrollTop <= $('#hongdong-6').offset().top) {
+                    $('.nav-tabs > li').removeClass('active');
+                    $('.nav-tabs [data-target="hongdong-5"]').parent().addClass('active');
+                }
+                if(wScrollTop > $('#hongdong-6').offset().top) {
+                    $('.nav-tabs > li').removeClass('active');
+                    $('.nav-tabs [data-target="hongdong-6"]').parent().addClass('active');
+                }
             })
         });
     })(jQuery);
