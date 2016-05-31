@@ -609,11 +609,24 @@
                     "offset": -174
                 });
             })
+            var freeze = false;
+            var scrollTopBeforeFreeze = 0;
             $(window).on('scroll', function(e) {
                 var wScrollTop = $(window).scrollTop();
                 if(wScrollTop > $('.main-content').offset().top) {
+                    if(freeze) {
+                        $(window).scrollTop($('.main-content').offset().top);
+                    }
+                    if(scrollTopBeforeFreeze < $('.main-content').offset().top) {
+                        freeze = true;
+                        scrollTopBeforeFreeze = wScrollTop + 1;
+                        setTimeout(function(){
+                            freeze = false;
+                        }, 300);
+                    }
                     $('.ruanxingfuwu').addClass('nav-tabs-fixed');
                 } else {
+                    scrollTopBeforeFreeze = wScrollTop + 1;
                     $('.ruanxingfuwu').removeClass('nav-tabs-fixed');
                 }
                 wScrollTop = wScrollTop + 380;
